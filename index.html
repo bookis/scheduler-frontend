@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>gmail sender</title>
+    <link rel="stylesheet" href="css/main.css" charset="utf-8">
+  </head>
+  <body>
+    <header>
+      <span class='brand'>Gmail Sender</span>
+      <ul class='nav' role='nav'>
+        <li><a href="#new-schedule" class="new-schedule">+ Schedule</a></li>
+      </ul>
+    </header>
+
+    <div class='main' role="main">
+
+    </div>
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/mustache/mustache.js"></script>
+    <script src="js/email.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- endbower -->
+    <script id="view-welcome" type="x-tmpl-mustache">
+      <h2>Scheduled</h2>
+      <form class='create-schedule'>
+        <label>
+          To:
+          <input name="schedule[to]" type="text">
+        </label>
+        <label>
+          Subject:
+          <input name="schedule[subject]" type="text">
+        </label>
+        <button>Submit</button>
+      </form>
+      <div class='emails-container'>
+      </div>
+    </script>
+
+    <script id="view-emails" type="x-tmpl-mustache">
+      <ul class='emails'>
+        {{#emails}}
+          <li data-id={{id}} class='email'>
+            {{ to }}
+            {{ subject }}
+            <a href='#email-delete' class='delete'>x</a>
+          </li>
+        {{/emails}}
+      </ul>
+    </script>
+  </body>
+</html>

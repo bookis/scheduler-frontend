@@ -1,0 +1,19 @@
+{
+  "name": "bookis.smuin@gmail.com",
+  "version": "0.0.0",
+  "authors": [
+    "Bookis Smuin <bookis.smuin@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "mustache": "~0.8.2"
+  }
+}
