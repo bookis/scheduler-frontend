@@ -2,18 +2,32 @@
   window.GmailApp || (window.GmailApp = {});
 
   GmailApp.Email = (function() {
-    function Email() {}
+    function Email(data) {
+      this.id = data.id;
+      this.subject = data.subject;
+      this.to = data.to;
+      this.body = data.body;
+    }
 
     Email.all = function() {
-      return this.allData || (this.allData = [
-        {
-          id: Math.random(),
-          to: "Luke@example.com",
-          time: "2014-11-28",
-          subject: "Lorem Ipsum",
-          body: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat"
-        }
-      ]);
+      return this.allData || (this.allData = []);
+    };
+
+    Email.fetch = function() {
+      this.all();
+      return $.ajax("http://localhost:3000/emails").then((function(_this) {
+        return function(response, status, xhr) {
+          return $.each(response, function(i, data) {
+            return _this.allData.push(new GmailApp.Email(data));
+          });
+        };
+      })(this));
+    };
+
+    Email.find = function(id) {
+      return this.all().filter(function(email) {
+        return email.id === id;
+      })[0];
     };
 
     Email["delete"] = function(obj) {
@@ -24,6 +38,31 @@
       });
       console.log("delete " + id + " from server");
       return obj.remove();
+    };
+
+    Email.create = function(form) {
+      return $.ajax("http://localhost:3000/emails", {
+        data: form.serialize(),
+        type: "POST",
+        complete: (function(_this) {
+          return function() {};
+        })(this),
+        success: (function(_this) {
+          return function(response) {
+            return _this.allData.push(new GmailApp.Email(response));
+          };
+        })(this),
+        error: (function(_this) {
+          return function(response) {
+            $(".errors-email ul").html("");
+            return $.each(response.responseJSON, function(key, errors) {
+              return $.each(errors, function(i, error) {
+                return $(".errors-schedule ul").append("<strong>" + key + "</strong>: " + error);
+              });
+            });
+          };
+        })(this)
+      });
     };
 
     Email.render = function() {

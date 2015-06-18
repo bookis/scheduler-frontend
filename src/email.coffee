@@ -1,22 +1,43 @@
 window.GmailApp or= {}
 
 class GmailApp.Email
+  constructor: (data) ->
+    @id = data.id
+    @subject = data.subject
+    @to = data.to
+    @body = data.body
+
   @all: () ->
-    this.allData or= [
-      {
-        id: Math.random(),
-        to: "Luke@example.com",
-        time: "2014-11-28",
-        subject: "Lorem Ipsum",
-        body: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat"
-      }
-    ]
+    this.allData or= []
+
+  @fetch: () ->
+    this.all()
+    $.ajax("http://localhost:3000/emails").then (response, status, xhr) =>
+      $.each response, (i, data) =>
+        this.allData.push new GmailApp.Email(data)
+
+  @find: (id) ->
+    this.all().filter( (email) -> email.id == id)[0]
 
   @delete: (obj) ->
     id = obj.data("id")
     this.allData = this.allData.filter (obj) -> obj.id isnt id
     console.log "delete #{id} from server"
     obj.remove()
+
+  @create: (form) ->
+    $.ajax "http://localhost:3000/emails", {
+      data: form.serialize(),
+      type: "POST",
+      complete: () =>
+      success: (response) =>
+        this.allData.push new GmailApp.Email(response)
+      error: (response) =>
+        $(".errors-email ul").html("")
+        $.each response.responseJSON, (key, errors) ->
+          $.each errors, (i, error) ->
+            $(".errors-schedule ul").append("<strong>#{key}</strong>: #{error}")
+    }
 
   @render: () ->
     emailsView = $("#view-emails").html()

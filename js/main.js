@@ -3,15 +3,22 @@
 
   GmailApp.Main = (function() {
     function Main() {
-      var rendered, welcomeView;
-      welcomeView = $("#view-welcome").html();
-      Mustache.parse(welcomeView);
-      rendered = Mustache.render(welcomeView);
-      this.render(rendered);
+      this.welcomeView = $("#view-welcome").html();
+      Mustache.parse(this.welcomeView);
+      this.render();
     }
 
-    Main.prototype.render = function(html) {
-      return $('[role=main]').html(html);
+    Main.prototype.render = function() {
+      return GmailApp.Email.fetch().then((function(_this) {
+        return function() {
+          var rendered;
+          rendered = Mustache.render(_this.welcomeView, {
+            emails: GmailApp.Email.all(),
+            app: GmailApp
+          });
+          return $('[role=main]').html(rendered);
+        };
+      })(this));
     };
 
     return Main;
@@ -19,25 +26,33 @@
   })();
 
   $(function() {
-    new GmailApp.Main();
-    GmailApp.Email.render();
+    var app;
+    app = new GmailApp.Main();
+    GmailApp.Schedule.fetch().then(function() {
+      return GmailApp.Schedule.render();
+    });
+
+    // $("body").on("click", ".new-window", function () {
+    //   window.open("/", "TEST WINDOW");
+    //   return false;
+    // });
     $("body").on("click", ".new-schedule", function() {
-      console.log("show schedule");
       return $('.create-schedule').show();
     });
     $("body").on("submit", ".create-schedule", function(event) {
       event.preventDefault();
-      console.log("create schedule on server");
-      GmailApp.Email.all().push({
-        id: Math.random(),
-        time: "2014-11-30",
-        to: "test@example.com",
-        subject: "Blah"
+      return GmailApp.Schedule.create($(this)).then(function() {
+        return GmailApp.Schedule.render();
       });
-      return GmailApp.Email.render();
+    });
+    $("body").on("submit", ".create-email", function(event) {
+      event.preventDefault();
+      return GmailApp.Email.create($(this)).then(function() {
+        return $('.create-schedule').show();
+      });
     });
     return $("body").on("click", ".email .delete", function() {
-      GmailApp.Email["delete"]($(this).parents(".email"));
+      GmailApp.Schedule["delete"]($(this).parents(".email"));
       return false;
     });
   });

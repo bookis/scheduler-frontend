@@ -2,28 +2,33 @@ window.GmailApp or= {}
 
 class GmailApp.Main
   constructor: () ->
-    welcomeView = $("#view-welcome").html()
-    Mustache.parse(welcomeView)
-    rendered = Mustache.render(welcomeView);
-    this.render(rendered)
+    @welcomeView = $("#view-welcome").html()
+    Mustache.parse(@welcomeView)
+    this.render()
 
-  render: (html) ->
-    $('[role=main]').html(html)
+  render: () ->
+    GmailApp.Email.fetch().then =>
+      rendered = Mustache.render(this.welcomeView, {emails: GmailApp.Email.all()});
+      $('[role=main]').html(rendered)
 
 $ ->
-  new GmailApp.Main()
-  GmailApp.Email.render()
+  app = new GmailApp.Main()
+  GmailApp.Schedule.fetch().then ->
+    GmailApp.Schedule.render()
 
   $("body").on "click", ".new-schedule", () ->
-    console.log("show schedule")
     $('.create-schedule').show()
 
   $("body").on "submit", ".create-schedule", (event) ->
     event.preventDefault()
-    console.log "create schedule on server"
-    GmailApp.Email.all().push {id: Math.random(), time: "2014-11-30", to: "test@example.com", subject: "Blah"}
-    GmailApp.Email.render()
+    GmailApp.Schedule.create($(this)).then ->
+      GmailApp.Schedule.render()
+
+  $("body").on "submit", ".create-email", (event) ->
+    event.preventDefault()
+    GmailApp.Email.create($(this)).then ->
+      $('.create-schedule').show()
 
   $("body").on "click", ".email .delete", () ->
-    GmailApp.Email.delete($(this).parents(".email"))
+    GmailApp.Schedule.delete($(this).parents(".email"))
     false

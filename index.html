@@ -8,6 +8,8 @@
     <header>
       <span class='brand'>Gmail Sender</span>
       <ul class='nav' role='nav'>
+        <li><a href="http://localhost:3000/auth/google_oauth2" class='new-window' target="_blank">Sign In</a>
+        <li><a href="http://localhost:3000/sign-out?redirect_to=http://localhost:8080" class='new-window'>Sign Out</a>
         <li><a href="#new-schedule" class="new-schedule">+ Schedule</a></li>
       </ul>
     </header>
@@ -18,20 +20,40 @@
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/mustache/mustache.js"></script>
+    <script src="js/schedule.js"></script>
     <script src="js/email.js"></script>
     <script src="js/main.js"></script>
 
     <!-- endbower -->
     <script id="view-welcome" type="x-tmpl-mustache">
       <h2>Scheduled</h2>
-      <form class='create-schedule'>
+
+      <div class='alert errors-schedule'>
+        <ul>
+        </ul>
+      </div>
+      <form class='create-email'>
         <label>
           To:
-          <input name="schedule[to]" type="text">
+          <input name="email[to]" type='email' />
         </label>
         <label>
           Subject:
-          <input name="schedule[subject]" type="text">
+          <input name="email[subject]" type='text' />
+        </label>
+        <button>Submit</button>
+      </form>
+      <form class='create-schedule'>
+        <label>
+          Send At:
+          <input name="schedule[send_at]" type="text">
+        </label>
+        <label>
+          <select name="schedule[email_id]">
+            {{#emails}}
+              <option value="{{id}}">{{subject}}</option>
+            {{/emails}}
+          </select>
         </label>
         <button>Submit</button>
       </form>
@@ -39,15 +61,15 @@
       </div>
     </script>
 
-    <script id="view-emails" type="x-tmpl-mustache">
+    <script id="view-schedules" type="x-tmpl-mustache">
       <ul class='emails'>
-        {{#emails}}
+        {{#schedules}}
           <li data-id={{id}} class='email'>
-            {{ to }}
-            {{ subject }}
+            {{ email.to }}
+            {{ email.subject }}
             <a href='#email-delete' class='delete'>x</a>
           </li>
-        {{/emails}}
+        {{/schedules}}
       </ul>
     </script>
   </body>
