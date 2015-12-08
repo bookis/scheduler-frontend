@@ -1,4 +1,7 @@
 window.GmailApp or= {}
+$.ajaxSetup {xhrFields: {
+  withCredentials: true
+}}
 
 class GmailApp.Email
   constructor: (data) ->

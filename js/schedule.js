@@ -1,6 +1,6 @@
 (function() {
   window.GmailApp || (window.GmailApp = {});
-  GmailApp.server_uri = "http://localhost:3000"
+
   GmailApp.Schedule = (function() {
     function Schedule(data) {
       this.id = data.id;
@@ -13,9 +13,9 @@
       return this.allData || (this.allData = []);
     };
 
-    Schedule.fetch = function() {
+    Schedule.fetch = function(email_id) {
       this.all();
-      return $.ajax("http://localhost:3000/schedules").then((function(_this) {
+      return $.ajax("http://localhost:3000/emails/" + email_id + "/schedules").then((function(_this) {
         return function(response, status, xhr) {
           return $.each(response, function(i, data) {
             return _this.allData.push(new GmailApp.Schedule(data));
@@ -24,30 +24,9 @@
       })(this));
     };
 
-    Schedule.create = function(form) {
-      return $.ajax("http://localhost:3000/schedules", {
-        data: form.serialize(),
-        type: "POST",
-        complete: (function(_this) {
-          return function() {};
-        })(this),
-        success: (function(_this) {
-          return function(response) {
-            $(".create-schedule").hide();
-            $(".errors-schedule ul").html("");
-            return _this.allData.push(new GmailApp.Schedule(response));
-          };
-        })(this),
-        error: (function(_this) {
-          return function(response) {
-            $(".errors-schedule ul").html("");
-            return $.each(response.responseJSON, function(key, errors) {
-              return $.each(errors, function(i, error) {
-                return $(".errors-schedule ul").append("<strong>" + key + "</strong>: " + error);
-              });
-            });
-          };
-        })(this)
+    Schedule.create = function(email_id) {
+      return $.ajax("http://localhost:3000/emails/" + email_id + "/schedules", {
+        type: "POST"
       });
     };
 

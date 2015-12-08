@@ -1,6 +1,12 @@
 (function() {
   window.GmailApp || (window.GmailApp = {});
 
+  $.ajaxSetup({
+    xhrFields: {
+      withCredentials: true
+    }
+  });
+
   GmailApp.Email = (function() {
     function Email(data) {
       this.id = data.id;

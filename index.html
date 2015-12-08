@@ -8,7 +8,7 @@
     <header>
       <span class='brand'>Gmail Sender</span>
       <ul class='nav' role='nav'>
-        <li><a href="http://localhost:3000/auth/google_oauth2" class='new-window' target="_blank">Sign In</a>
+        <li><a href="http://localhost:3000/auth/google_oauth2/new?redirect_to=http://localhost:8080">Sign In</a>
         <li><a href="http://localhost:3000/sign-out?redirect_to=http://localhost:8080" class='new-window'>Sign Out</a>
         <li><a href="#new-schedule" class="new-schedule">+ Schedule</a></li>
       </ul>
@@ -41,23 +41,33 @@
           Subject:
           <input name="email[subject]" type='text' />
         </label>
-        <button>Submit</button>
-      </form>
-      <form class='create-schedule'>
         <label>
-          Send At:
-          <input name="schedule[send_at]" type="text">
+          Send at:
+          <input name="email[send_first_at]" type='text' />
         </label>
         <label>
-          <select name="schedule[email_id]">
-            {{#emails}}
-              <option value="{{id}}">{{subject}}</option>
-            {{/emails}}
+          Repeat:
+          <select name="email[every_n_minutes]">
+            <option value="{{#daysToMinutes}}1{{/daysToMinutes}}">Daily</option>
+            <option value="{{#daysToMinutes}}2{{/daysToMinutes}}">2 Days</option>
+            <option value="{{#daysToMinutes}}3{{/daysToMinutes}}">3 Days</option>
+            <option value="{{#daysToMinutes}}4{{/daysToMinutes}}">4 Days</option>
+            <option value="{{#daysToMinutes}}5{{/daysToMinutes}}">5 Days</option>
+            <option value="{{#daysToMinutes}}6{{/daysToMinutes}}">6 Days</option>
+            <option value="{{#daysToMinutes}}7{{/daysToMinutes}}">Weekly</option>
+            <option value="{{#daysToMinutes}}30{{/daysToMinutes}}">Monthly</option>
+            <option value="{{#daysToMinutes}}365{{/daysToMinutes}}">Yearly</option>
           </select>
+        </label>
+        <label>
+          <input name="email[times]" type='number' />
+          times
         </label>
         <button>Submit</button>
       </form>
       <div class='emails-container'>
+      </div>
+      <div class='email-container'>
       </div>
     </script>
 
@@ -72,5 +82,27 @@
         {{/schedules}}
       </ul>
     </script>
+
+    <script id="view-emails" type="x-tmpl-mustache">
+      {{#emails}}
+        <div class='email-master' data-id="{{id}}">
+          <h2>{{subject}}</h2>
+          <h3>{{to}}</h3>
+        </div>
+      {{/emails}}
+    </script>
+
+    <script id="view-email" type="x-tmpl-mustache">
+      <div class='email' data-id="{{email.id}}">
+        {{email.id}}
+        {{#schedules}}
+          <div class='schedule'>
+            {{id}}
+          </div>
+        {{/schedules}}
+        <a href="#" class="refresh-schedules" data-id="{{email.id}}">Refresh</a>
+      </div>
+    </script>
+
   </body>
 </html>

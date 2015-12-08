@@ -10,27 +10,14 @@ class GmailApp.Schedule
   @all: () ->
     this.allData or= []
 
-  @fetch: () ->
+  @fetch: (email_id) ->
     this.all()
-    $.ajax("http://localhost:3000/schedules").then (response, status, xhr) =>
+    $.ajax("http://localhost:3000/emails/#{email_id}/schedules").then (response, status, xhr) =>
       $.each response, (i, data) =>
         this.allData.push new GmailApp.Schedule(data)
 
-  @create: (form) ->
-    $.ajax "http://localhost:3000/schedules", {
-      data: form.serialize(),
-      type: "POST",
-      complete: () =>
-      success: (response) =>
-        $(".create-schedule").hide()
-        $(".errors-schedule ul").html("")
-        this.allData.push new GmailApp.Schedule(response)
-      error: (response) =>
-        $(".errors-schedule ul").html("")
-        $.each response.responseJSON, (key, errors) ->
-          $.each errors, (i, error) ->
-            $(".errors-schedule ul").append("<strong>#{key}</strong>: #{error}")
-    }
+  @create: (email_id) ->
+    $.ajax "http://localhost:3000/emails/#{email_id}/schedules", {type: "POST"}
 
   @delete: (obj) ->
     id = obj.data("id")
