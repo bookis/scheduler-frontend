@@ -12,16 +12,16 @@ class GmailApp.Schedule
 
   @fetch: (email_id) ->
     this.all()
-    $.ajax("http://localhost:3000/emails/#{email_id}/schedules").then (response, status, xhr) =>
+    $.ajax("#{GmailApp.apiUrl}/emails/#{email_id}/schedules").then (response, status, xhr) =>
       $.each response, (i, data) =>
         this.allData.push new GmailApp.Schedule(data)
 
   @create: (email_id) ->
-    $.ajax "http://localhost:3000/emails/#{email_id}/schedules", {type: "POST"}
+    $.ajax "#{GmailApp.apiUrl}/emails/#{email_id}/schedules", {type: "POST"}
 
   @delete: (obj) ->
     id = obj.data("id")
-    $.ajax("http://localhost:3000/schedules/#{id}", type: "DELETE").then =>
+    $.ajax("#{GmailApp.apiUrl}/schedules/#{id}", type: "DELETE").then =>
       this.allData = this.allData.filter (obj) -> obj.id isnt id
       obj.remove()
 

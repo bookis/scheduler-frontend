@@ -1,4 +1,5 @@
 window.GmailApp or= {}
+
 $.ajaxSetup {xhrFields: {
   withCredentials: true
 }}
@@ -15,7 +16,7 @@ class GmailApp.Email
 
   @fetch: () ->
     this.all()
-    $.ajax("http://localhost:3000/emails").then (response, status, xhr) =>
+    $.ajax("#{GmailApp.apiUrl}/emails").then (response, status, xhr) =>
       $.each response, (i, data) =>
         this.allData.push new GmailApp.Email(data)
 
@@ -29,7 +30,7 @@ class GmailApp.Email
     obj.remove()
 
   @create: (form) ->
-    $.ajax "http://localhost:3000/emails", {
+    $.ajax "#{GmailApp.apiUrl}/emails", {
       data: form.serialize(),
       type: "POST",
       complete: () =>
