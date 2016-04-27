@@ -2,8 +2,15 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks('grunt-contrib-coffee')
   grunt.loadNpmTasks('grunt-contrib-watch')
   grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-http-server');
 
   grunt.initConfig
+    "http-server":
+      dev:
+        root: ".",
+        host: "localhost",
+        port: 4000,
+        runInBackground: true
     watch:
       coffee:
         files: 'src/*.coffee'
@@ -28,4 +35,5 @@ module.exports = (grunt) ->
         cwd: "#{__dirname}/src/",
         files:
           "js/app.js": ['src/*.coffee']
+
   grunt.registerTask('default', ['watch']);
