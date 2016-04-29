@@ -120,9 +120,20 @@ input {
   height: 100%;
 }
 
-.email {
+.email-container {
   float: right;
-  width: 500px;
+  width: 800px;
+  margin-left: 30px;
+}
+
+.email-container li {
+  display: inline-block;
+  width: 300px;
+  margin: 0px;
+}
+
+.email-container ul {
+  padding: 0px;
 }
 
 /*# sourceMappingURL=main.css.map */
