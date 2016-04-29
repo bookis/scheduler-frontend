@@ -6,7 +6,6 @@
   </head>
   <body>
     <header>
-      <span class='brand'>Gmail Sender</span>
       <ul class='nav' role='nav'>
         <li><a href="http://www.scheduled.email/auth/google_oauth2/new?redirect_to=http://localhost:8080">Sign In</a>
         <li><a href="http://www.scheduled.email/sign-out?redirect_to=http://localhost:8080" class='new-window'>Sign Out</a>
@@ -24,19 +23,14 @@
 
     <!-- endbower -->
     <script id="view-welcome" type="x-tmpl-mustache">
-      <h2>Scheduled</h2>
-
+      <h2 class = "headline">GMail Sender</h2>
       <div class='alert errors-schedule'>
         <ul>
         </ul>
       </div>
       <form class='create-email'>
         <ul>
-          <li>
-            <p>
-             New Schedule
-            </p>
-          </li>
+          <li><p>New Schedule</p></li>
           <li>
             <label>
               <input name="email[to]" type='email' placeholder="To" />
@@ -49,35 +43,43 @@
           </li>
           <li>
             <label>
-              <input name="email[send_first_at]" type='text' placeholder="Send at" />
+              <input name="body-placeholder" type='text' placeholder="Body" />
             </label>
           </li>
           <li>
-            <label>
-              <div class = "styled-select">
-              Repeat:
-              <select name="email[every_n_minutes]">
-                <option value="{{#daysToMinutes}}1{{/daysToMinutes}}">Daily</option>
-                <option value="{{#daysToMinutes}}2{{/daysToMinutes}}">2 Days</option>
-                <option value="{{#daysToMinutes}}3{{/daysToMinutes}}">3 Days</option>
-                <option value="{{#daysToMinutes}}4{{/daysToMinutes}}">4 Days</option>
-                <option value="{{#daysToMinutes}}5{{/daysToMinutes}}">5 Days</option>
-                <option value="{{#daysToMinutes}}6{{/daysToMinutes}}">6 Days</option>
-                <option value="{{#daysToMinutes}}7{{/daysToMinutes}}">Weekly</option>
-                <option value="{{#daysToMinutes}}30{{/daysToMinutes}}">Monthly</option>
-                <option value="{{#daysToMinutes}}365{{/daysToMinutes}}">Yearly</option>
-              </select>
-             </div>
-            </label>
+            <a href>Schedule Email</a>
+            <button>Complete Email</button>
           </li>
-          <li>
-            <label>
-              <input name="email[times]" type='number' placeholder="Number of Times" />
-            </label>
-          </li>
-          <li>
-          <button>Submit</button>
-          </li>
+            <div id = "schedule-send">
+              <li>
+                <label>
+                  <input name="email[send_first_at]" type='text' placeholder="Send at" />
+                </label>
+              </li>
+              <li>
+                <label>
+                  <div class = "styled-select">
+                  Repeat:
+                  <select name="email[every_n_minutes]">
+                    <option value="{{#daysToMinutes}}1{{/daysToMinutes}}">Daily</option>
+                    <option value="{{#daysToMinutes}}2{{/daysToMinutes}}">2 Days</option>
+                    <option value="{{#daysToMinutes}}3{{/daysToMinutes}}">3 Days</option>
+                    <option value="{{#daysToMinutes}}4{{/daysToMinutes}}">4 Days</option>
+                    <option value="{{#daysToMinutes}}5{{/daysToMinutes}}">5 Days</option>
+                    <option value="{{#daysToMinutes}}6{{/daysToMinutes}}">6 Days</option>
+                    <option value="{{#daysToMinutes}}7{{/daysToMinutes}}">Weekly</option>
+                    <option value="{{#daysToMinutes}}30{{/daysToMinutes}}">Monthly</option>
+                    <option value="{{#daysToMinutes}}365{{/daysToMinutes}}">Yearly</option>
+                  </select>
+                 </div>
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input name="email[times]" type='number' placeholder="Number of Times" />
+                </label>
+              </li>
+           </div>
        </ul>
       </form>
       <div class='emails-container'>
