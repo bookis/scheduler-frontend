@@ -31,41 +31,59 @@
         </ul>
       </div>
       <form class='create-email'>
-        <label>
-          To:
-          <input name="email[to]" type='email' />
-        </label>
-        <label>
-          Subject:
-          <input name="email[subject]" type='text' />
-        </label>
-        <label>
-          Send at:
-          <input name="email[send_first_at]" type='text' />
-        </label>
-        <label>
-          Repeat:
-          <select name="email[every_n_minutes]">
-            <option value="{{#daysToMinutes}}1{{/daysToMinutes}}">Daily</option>
-            <option value="{{#daysToMinutes}}2{{/daysToMinutes}}">2 Days</option>
-            <option value="{{#daysToMinutes}}3{{/daysToMinutes}}">3 Days</option>
-            <option value="{{#daysToMinutes}}4{{/daysToMinutes}}">4 Days</option>
-            <option value="{{#daysToMinutes}}5{{/daysToMinutes}}">5 Days</option>
-            <option value="{{#daysToMinutes}}6{{/daysToMinutes}}">6 Days</option>
-            <option value="{{#daysToMinutes}}7{{/daysToMinutes}}">Weekly</option>
-            <option value="{{#daysToMinutes}}30{{/daysToMinutes}}">Monthly</option>
-            <option value="{{#daysToMinutes}}365{{/daysToMinutes}}">Yearly</option>
-          </select>
-        </label>
-        <label>
-          <input name="email[times]" type='number' />
-          times
-        </label>
-        <button>Submit</button>
+        <ul>
+          <li>
+            <p>
+             New Schedule
+            </p>
+          </li>
+          <li>
+            <label>
+              <input name="email[to]" type='email' placeholder="To" />
+            </label>
+          </li>
+          <li>
+            <label>
+              <input name="email[subject]" type='text' placeholder="Subject" />
+            </label>
+          </li>
+          <li>
+            <label>
+              <input name="email[send_first_at]" type='text' placeholder="Send at" />
+            </label>
+          </li>
+          <li>
+            <label>
+              <div class = "styled-select">
+              Repeat:
+              <select name="email[every_n_minutes]">
+                <option value="{{#daysToMinutes}}1{{/daysToMinutes}}">Daily</option>
+                <option value="{{#daysToMinutes}}2{{/daysToMinutes}}">2 Days</option>
+                <option value="{{#daysToMinutes}}3{{/daysToMinutes}}">3 Days</option>
+                <option value="{{#daysToMinutes}}4{{/daysToMinutes}}">4 Days</option>
+                <option value="{{#daysToMinutes}}5{{/daysToMinutes}}">5 Days</option>
+                <option value="{{#daysToMinutes}}6{{/daysToMinutes}}">6 Days</option>
+                <option value="{{#daysToMinutes}}7{{/daysToMinutes}}">Weekly</option>
+                <option value="{{#daysToMinutes}}30{{/daysToMinutes}}">Monthly</option>
+                <option value="{{#daysToMinutes}}365{{/daysToMinutes}}">Yearly</option>
+              </select>
+             </div>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input name="email[times]" type='number' placeholder="Number of Times" />
+            </label>
+          </li>
+          <li>
+          <button>Submit</button>
+          </li>
+       </ul>
       </form>
       <div class='emails-container'>
       </div>
       <div class='email-container'>
+      <h1>Email #1</h1>
       </div>
     </script>
 
