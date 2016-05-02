@@ -9,4 +9,12 @@ $( document ).ready(function() {
       // $('.schedule-send').removeClass('schedule-send');
       return false;
   })
+
+  $( ".datepicker").datepicker({
+    altField: "#actualDate"
+  });
+
+
+
+
 });
