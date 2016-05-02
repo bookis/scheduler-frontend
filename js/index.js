@@ -10,11 +10,9 @@ $( document ).ready(function() {
       return false;
   })
 
-  $( ".datepicker").datepicker({
-    altField: "#actualDate"
-  });
-
-
-
+  $('body').on('click', '.go-back', function(){
+      parent.history.back();
+      return false;
+  })
 
 });
