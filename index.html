@@ -29,29 +29,32 @@
         <ul>
         </ul>
       </div>
-      <form class='create-email'>
-        <ul>
-          <li><p>New Schedule</p></li>
-          <li>
-            <label>
-              <input name="email[to]" type='email' placeholder="To" />
-            </label>
-          </li>
-          <li>
-            <label>
-              <input name="email[subject]" type='text' placeholder="Subject" />
-            </label>
-          </li>
-          <li>
-            <label>
-              <input name="body-placeholder" type='text' placeholder="Body" />
-            </label>
-          </li>
-          <li>
-            <a href id = "schedule">Schedule Email</a>
-            <button>Complete Email</button>
-          </li>
+      <div class = "email-create">
+        <form class='create-email'>
+          <ul>
+            <li><p>New Schedule</p></li>
+            <li>
+              <label>
+                <input name="email[to]" type='email' placeholder="To" />
+              </label>
+            </li>
+            <li>
+              <label>
+                <input name="email[subject]" type='text' placeholder="Subject" />
+              </label>
+            </li>
+            <li>
+              <label class = "body">
+                <input name="body-placeholder" type='text' placeholder="Body" />
+              </label>
+            </li>
+            <li>
+              <a href id = "schedule">Schedule Email</a>
+            </li>
+            </ul>
+          </div>
             <div class = "schedule-send">
+            <ul>
               <li>
                 <label>
                   <input name="email[send_first_at]" type='text' placeholder="Send at" />
@@ -79,6 +82,9 @@
                 <label>
                   <input name="email[times]" type='number' placeholder="Number of Times" />
                 </label>
+              </li>
+              <li>
+                <a href id = "confirm-button">Hit Send</a>
               </li>
            </div>
        </ul>
