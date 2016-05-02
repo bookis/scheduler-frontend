@@ -20,6 +20,7 @@
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/mustache/mustache.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/index.js"></script>
 
     <!-- endbower -->
     <script id="view-welcome" type="x-tmpl-mustache">
@@ -47,10 +48,10 @@
             </label>
           </li>
           <li>
-            <a href>Schedule Email</a>
+            <a href id = "schedule">Schedule Email</a>
             <button>Complete Email</button>
           </li>
-            <div id = "schedule-send">
+            <div class = "schedule-send">
               <li>
                 <label>
                   <input name="email[send_first_at]" type='text' placeholder="Send at" />

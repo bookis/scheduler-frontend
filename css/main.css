@@ -151,12 +151,22 @@ input {
   padding: 0px;
 }
 
-#schedule-send {
-  display: none;
+a#schedule {
+  border: 1px solid;
+  background-color: #4CAF50;
+  height: 50px;
+  width: 200px;
+  display: block;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  vertical-align: middle;
 }
 
-button:hover + #schedule-send {
-  display: block;
+.schedule-send {
+  display: none;
 }
 
 /*# sourceMappingURL=main.css.map */
