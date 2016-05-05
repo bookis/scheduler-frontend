@@ -35,68 +35,63 @@
 
       <div class = "email-create">
         <div>
-        <label>
-          <input name="email[to]" type='email' placeholder="To" />
-        </label>
-        </div>
-        <ul>
-          <li><p>New Schedule</p></li>
-          <li>
 
-          </li>
-          <li>
-            <label>
-              <input name="email[subject]" type='text' placeholder="Subject" />
-            </label>
-          </li>
-          <li>
-            <label class = "email-body">
-              <input name="body-placeholder" type='text' placeholder="Body" />
-            </label>
-          </li>
-          <li>
-            <a href id = "schedule">Schedule Email</a>
-          </li>
-        </ul>
+          <label>
+            New Schedule<input name="email[to]" type='email' placeholder="To" />
+          </label>
+        </div>
+        <div>
+          <label>
+            <input name="email[subject]" type='text' placeholder="Subject" />
+          </label>
+        </div>
+        <div>
+          <label class = "email-body">
+            <input name="body-placeholder" type='text' placeholder="Body" />
+          </label>
+        </div>
+        <div>
+          <a href id = "schedule">Schedule Email</a>
+        </div>
       </div>
 
       <div class = "schedule-send">
-        <ul>
-          <li>
-            <label>
-              <input type="text" id = "datepicker" name="email[send_first_at]" placeholder="Send at" />
-            </label>
-          </li>
-          <li>
-            <label>
-              <div class = "styled-select">
-              Repeat:
-              <select name="email[every_n_minutes]">
-                <option value="{{#daysToMinutes}}1{{/daysToMinutes}}">Daily</option>
-                <option value="{{#daysToMinutes}}2{{/daysToMinutes}}">2 Days</option>
-                <option value="{{#daysToMinutes}}3{{/daysToMinutes}}">3 Days</option>
-                <option value="{{#daysToMinutes}}4{{/daysToMinutes}}">4 Days</option>
-                <option value="{{#daysToMinutes}}5{{/daysToMinutes}}">5 Days</option>
-                <option value="{{#daysToMinutes}}6{{/daysToMinutes}}">6 Days</option>
-                <option value="{{#daysToMinutes}}7{{/daysToMinutes}}">Weekly</option>
-                <option value="{{#daysToMinutes}}30{{/daysToMinutes}}">Monthly</option>
-                <option value="{{#daysToMinutes}}365{{/daysToMinutes}}">Yearly</option>
-              </select>
-             </div>
-            </label>
-          </li>
-          <li>
-            <label>
-              <input name="email[times]" type='number' placeholder="Number of Times" />
-            </label>
-          </li>
-          <li>
-            <button class = "go-back">< Go Back</button>
-            <button>Submit</button>
-          </li>
+        <div>
+          <label>
+            <input type="text" id = "datepicker" name="email[send_first_at]" placeholder="Send at" />
+          </label>
         </div>
-       </ul>
+        <div>
+          <label>
+            <div class = "styled-select">
+            Repeat:
+            <select name="email[every_n_minutes]">
+              <option value="{{#daysToMinutes}}1{{/daysToMinutes}}">Daily</option>
+              <option value="{{#daysToMinutes}}2{{/daysToMinutes}}">2 Days</option>
+              <option value="{{#daysToMinutes}}3{{/daysToMinutes}}">3 Days</option>
+              <option value="{{#daysToMinutes}}4{{/daysToMinutes}}">4 Days</option>
+              <option value="{{#daysToMinutes}}5{{/daysToMinutes}}">5 Days</option>
+              <option value="{{#daysToMinutes}}6{{/daysToMinutes}}">6 Days</option>
+              <option value="{{#daysToMinutes}}7{{/daysToMinutes}}">Weekly</option>
+              <option value="{{#daysToMinutes}}30{{/daysToMinutes}}">Monthly</option>
+              <option value="{{#daysToMinutes}}365{{/daysToMinutes}}">Yearly</option>
+            </select>
+           </div>
+          </label>
+        </div>
+        <div>
+          <label>
+            <input name="email[times]" type='number' placeholder="Number of Times" />
+          </label>
+        </div>
+        <div>
+          <button class = "go-back">< Go Back</button>
+          <button>Submit</button>
+        </div>
+      </div>
+
       </form>
+
       <div class='emails-container'>
       </div>
       <div class='email-container'>
