@@ -86,7 +86,7 @@ form ul {
   list-style-type: none;
 }
 
-.create-email li p {
+.create-email h2 {
   background-color: grey;
   color: white;
   padding: 25px;
