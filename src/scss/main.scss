@@ -1,8 +1,9 @@
 @import "../../bower_components/bourbon/app/assets/stylesheets/bourbon.scss";
 @import "../../bower_components/neat/app/assets/stylesheets/neat.scss";
 
-.create-schedule {
-  display: none;
+body, html{
+font-family: $helvetica;
+margin:0px;
 }
 
 .nav{
@@ -17,11 +18,6 @@
   text-align:center;
   padding-top:20px;
   font-size:20px;
-}
-
-body, html{
-font-family: $helvetica;
-margin:0px;
 }
 
 .datepicker{
@@ -55,15 +51,18 @@ form{
   height:800px;
 }
 
-form ul{
-  list-style-type: none;
-  padding-left:0px;
-  margin-bottom:50px;
-}
-
 .create-email input{
   width:100%;
   height:40px;
+}
+
+.create-email h2{
+  background-color:grey;
+  color:white;
+  padding:25px;
+  margin-bottom:0px;
+  margin-top:0px;
+  font-size:20px;
 }
 
 .schedule-send{
@@ -78,18 +77,15 @@ form ul{
 .schedule-send li{
   list-style-type:none;
 }
-.create-email h2{
-  background-color:grey;
-  color:white;
-  padding:25px;
-  margin-bottom:0px;
-  margin-top:0px;
-  font-size:20px;
+
+.create-schedule {
+  display: none;
 }
 
- button.go-back{
+button.go-back{
   @include button (simple,#FF0000);
 }
+
 button{
    @include button(simple, #4CAF50);
    margin-left:20px;
@@ -133,7 +129,6 @@ input{
 
 .email-container li{
   display:inline-block;
-  // margin-right:120px;
   width:300px;
   margin:0px;
 }
