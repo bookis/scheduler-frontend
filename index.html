@@ -10,6 +10,9 @@
         <li><a href="http://www.scheduled.email/auth/google_oauth2/new?redirect_to=http://localhost:8080">Sign In</a>
         <li><a href="http://www.scheduled.email/sign-out?redirect_to=http://localhost:8080" class='new-window'>Sign Out</a>
         <li><a href="#new-schedule" class="new-schedule">+ Schedule</a></li>
+        <div class = "logo">
+          <li><h2 class = "headline">GMail Sender</h2></li>
+        </div>
       </ul>
     </header>
 
@@ -24,70 +27,74 @@
 
     <!-- endbower -->
     <script id="view-welcome" type="x-tmpl-mustache">
-      <h2 class = "headline">GMail Sender</h2>
       <div class='alert errors-schedule'>
         <ul>
         </ul>
       </div>
+      <form class='create-email'>
+
       <div class = "email-create">
-        <form class='create-email'>
-          <ul>
-            <li><p>New Schedule</p></li>
-            <li>
-              <label>
-                <input name="email[to]" type='email' placeholder="To" />
-              </label>
-            </li>
-            <li>
-              <label>
-                <input name="email[subject]" type='text' placeholder="Subject" />
-              </label>
-            </li>
-            <li>
-              <label class = "body">
-                <input name="body-placeholder" type='text' placeholder="Body" />
-              </label>
-            </li>
-            <li>
-              <a href id = "schedule">Schedule Email</a>
-            </li>
-            </ul>
-          </div>
-            <div class = "schedule-send">
-            <ul>
-              <li>
-                <label>
-                  <input class = "datepicker" type="datetime-local" name="email[send_first_at]" placeholder="Send at" />
-                </label>
-              </li>
-              <li>
-                <label>
-                  <div class = "styled-select">
-                  Repeat:
-                  <select name="email[every_n_minutes]">
-                    <option value="{{#daysToMinutes}}1{{/daysToMinutes}}">Daily</option>
-                    <option value="{{#daysToMinutes}}2{{/daysToMinutes}}">2 Days</option>
-                    <option value="{{#daysToMinutes}}3{{/daysToMinutes}}">3 Days</option>
-                    <option value="{{#daysToMinutes}}4{{/daysToMinutes}}">4 Days</option>
-                    <option value="{{#daysToMinutes}}5{{/daysToMinutes}}">5 Days</option>
-                    <option value="{{#daysToMinutes}}6{{/daysToMinutes}}">6 Days</option>
-                    <option value="{{#daysToMinutes}}7{{/daysToMinutes}}">Weekly</option>
-                    <option value="{{#daysToMinutes}}30{{/daysToMinutes}}">Monthly</option>
-                    <option value="{{#daysToMinutes}}365{{/daysToMinutes}}">Yearly</option>
-                  </select>
-                 </div>
-                </label>
-              </li>
-              <li>
-                <label>
-                  <input name="email[times]" type='number' placeholder="Number of Times" />
-                </label>
-              </li>
-              <li>
-                <button class = "go-back"> < Go Back</button>
-                <button>Complete Schedule</button>
-              </li>
-           </div>
+        <div>
+        <label>
+          <input name="email[to]" type='email' placeholder="To" />
+        </label>
+        </div>
+        <ul>
+          <li><p>New Schedule</p></li>
+          <li>
+
+          </li>
+          <li>
+            <label>
+              <input name="email[subject]" type='text' placeholder="Subject" />
+            </label>
+          </li>
+          <li>
+            <label class = "email-body">
+              <input name="body-placeholder" type='text' placeholder="Body" />
+            </label>
+          </li>
+          <li>
+            <a href id = "schedule">Schedule Email</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class = "schedule-send">
+        <ul>
+          <li>
+            <label>
+              <input type="text" id = "datepicker" name="email[send_first_at]" placeholder="Send at" />
+            </label>
+          </li>
+          <li>
+            <label>
+              <div class = "styled-select">
+              Repeat:
+              <select name="email[every_n_minutes]">
+                <option value="{{#daysToMinutes}}1{{/daysToMinutes}}">Daily</option>
+                <option value="{{#daysToMinutes}}2{{/daysToMinutes}}">2 Days</option>
+                <option value="{{#daysToMinutes}}3{{/daysToMinutes}}">3 Days</option>
+                <option value="{{#daysToMinutes}}4{{/daysToMinutes}}">4 Days</option>
+                <option value="{{#daysToMinutes}}5{{/daysToMinutes}}">5 Days</option>
+                <option value="{{#daysToMinutes}}6{{/daysToMinutes}}">6 Days</option>
+                <option value="{{#daysToMinutes}}7{{/daysToMinutes}}">Weekly</option>
+                <option value="{{#daysToMinutes}}30{{/daysToMinutes}}">Monthly</option>
+                <option value="{{#daysToMinutes}}365{{/daysToMinutes}}">Yearly</option>
+              </select>
+             </div>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input name="email[times]" type='number' placeholder="Number of Times" />
+            </label>
+          </li>
+          <li>
+            <button class = "go-back">< Go Back</button>
+            <button>Submit</button>
+          </li>
+        </div>
        </ul>
       </form>
       <div class='emails-container'>
@@ -108,6 +115,8 @@
           sunt in culpa qui officia deserunt mollit anim id est laborum.
           </p>
       </div>
+      <div>
+      </div>
     </script>
 
     <script id="view-schedules" type="x-tmpl-mustache">
@@ -126,7 +135,7 @@
       {{#emails}}
         <div class='email-master' data-id="{{id}}">
           <h2>{{subject}}</h2>
-          <h3>{{to}}</h3>
+          <p>{{to}}</p>
         </div>
       {{/emails}}
     </script>

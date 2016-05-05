@@ -10,6 +10,10 @@ html {
   display: none;
 }
 
+.nav {
+  margin: 0px;
+}
+
 .headline {
   background-color: #80D8FF;
   color: white;
@@ -17,6 +21,7 @@ html {
   height: 70px;
   text-align: center;
   padding-top: 20px;
+  font-size: 20px;
 }
 
 body, html {
@@ -33,7 +38,11 @@ a {
 }
 
 header {
-  font-size: 40px;
+  height: 80px;
+}
+
+.logo {
+  float: left;
 }
 
 header li {
@@ -181,7 +190,7 @@ input {
   float: left;
   width: 350px;
   border-right: 1px solid black;
-  padding-left: 20px;
+  padding-left: 10px;
   height: 100%;
 }
 
@@ -224,8 +233,16 @@ a#schedule, a#confirm-button {
   display: none;
 }
 
-.body input {
+.email-body input {
   height: 500px;
+}
+
+.email-master {
+  border-top: 1px solid black;
+}
+
+.email-master p {
+  font-size: 20px;
 }
 
 /*# sourceMappingURL=main.css.map */

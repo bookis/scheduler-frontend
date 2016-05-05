@@ -15,4 +15,9 @@ $( document ).ready(function() {
       return false;
   })
 
+  $('body').on('click', '#datepicker', function(){
+    console.log("datepicker");
+  // $('#datepicker').pikaday({ firstDay: 1 });
+  });
+
 });
