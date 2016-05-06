@@ -55,30 +55,19 @@ a#schedule, a#confirm-button {
   height:80px;
 }
 
-.datepicker{
-  font-family: $helvetica;
+#datepicker{
+  width:400px;
 }
 
-header{
-  height:80px;
-}
-.logo{
-  float:left;
-}
-
-header li{
-  color:red;
-  font-size:25px;
-  display:inline-block;
-  padding-right:40px;
-  float:right;
+.styled-select select{
+  width:200px;
+  -webkit-appearance: menulist-button;
+  height: 50px;
 }
 
 
-
-
-.create-schedule {
-  display: none;
+#every-time{
+  width:400px;
 }
 
 button.go-back{
@@ -91,16 +80,26 @@ button{
    margin-top:20px;
 }
 
-.styled-select{
-  margin:20px;
+
+header{
+  height:80px;
 }
 
-.styled-select select{
-  height:30px;
-  background-color:pink;
-  font-size:15px;
-  margin-left:10px;
+header li{
+  color:red;
+  font-size:25px;
+  display:inline-block;
+  padding-right:40px;
+  float:right;
 }
+
+
+.create-schedule {
+  display: none;
+}
+
+
+
 
 input:placeholder-shown {
   font-size:15px;
