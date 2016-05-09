@@ -4,6 +4,7 @@
     <title>gmail sender</title>
     <link rel="stylesheet" href="css/main.css" charset="utf-8">
     <link rel="stylesheet" href="css/pikaday.css" charset="utf-8">
+    <script src="https://use.fontawesome.com/a46defc72c.js"></script>
     <script src="js/pikaday.js"></script>
   </head>
   <body>
@@ -12,7 +13,6 @@
         <li><a href="http://www.scheduled.email/auth/google_oauth2/new?redirect_to=http://localhost:8080">Sign In</a>
         <li><a href="http://www.scheduled.email/sign-out?redirect_to=http://localhost:8080" class='new-window'>Sign Out</a>
         <li><a href="#new-schedule" class="new-schedule">+ Schedule</a></li>
-        <a href id = "schedule">Schedule</a>
       </ul>
     </header>
 
@@ -34,27 +34,27 @@
       <form class='create-email'>
 
       <div class = "email-create">
-        <div>
+        <div class = "sending">
           <label>
-            <input name="email[to]" type='email' class = "send-to" />
+            <input name="email[to]" type='email' class = "send-to" placeholder="&#xf007;" style="font-family:Arial, FontAwesome" />
           </label>
         </div>
         <div>
           <label>
-            <input name="email[subject]" type='text' placeholder="Subject" />
+            <input name="email[subject]" type='text' placeholder= "subject"/>
           </label>
         </div>
         <div>
           <label class = "email-body">
-            <input name="body-placeholder" type='text' placeholder="Body" />
+            <input name="body-placeholder" type='text' />
           </label>
         </div>
       </div>
 
       <div class = "schedule-send">
-        <div>
+        <div class = "send-at">
           <label>
-            Starting At: <input type="text" id = "datepicker" name="email[send_first_at]"/>
+            <p>Starting At : </p> <input type="text" id = "datepicker" name="email[send_first_at]"  placeholder="&#xf017;" style="font-family:Arial, FontAwesome" />
           </label>
         </div>
         <div>
@@ -75,34 +75,32 @@
            </div>
           </label>
         </div>
-        <div>
+        <div class = "send-at">
           <label>
-            Every : <input name="email[times]" type='number' id = "every-time" placeholder="Number of Times" />
+            <p>Every : </p><input name="email[times]" type='number' id = "every-time" placeholder="&#xf0d8; Month" style="font-family:Arial, FontAwesome" />
           </label>
         </div>
         <div>
           <button>Submit</button>
-
+          <a href id = "schedule">Schedule</a>
         </div>
       </div>
 
       </form>
 
-      <div class = "how-to">
-        <div>
-        <p>
-        Image Placeholder Here
-        </p>
+      <div class = "blue-box">
+        <div class = "envelope">
+          <p>Placeholder for image</p>
         </div>
-        <div>
+        <div class = "product-info">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-             nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-             reprehenderit in voluptate velit esse cillum dolore eu fugiat
-             nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-             sunt in culpa qui officia deserunt mollit anim id est laborum.
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+           nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+           in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+           nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+           sunt in culpa qui officia deserunt mollit anim id est laborum.
           </p>
         </div>
       </div>
@@ -159,8 +157,6 @@
         <a href="#" class="refresh-schedules" data-id="{{email.id}}">Refresh</a>
       </div>
     </script>
-
-
 
   </body>
 </html>
