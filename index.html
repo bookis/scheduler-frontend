@@ -10,17 +10,17 @@
   <body>
     <header>
       <ul class='nav' role='nav'>
-        <li><a href="http://www.scheduled.email/auth/google_oauth2/new?redirect_to=http://localhost:8080">Sign In</a>
         <li><a href="http://www.scheduled.email/sign-out?redirect_to=http://localhost:8080" class='new-window'>Sign Out</a>
-        <li><a href="#new-schedule" class="new-schedule">+ Schedule</a></li>
+        <!-- <li><a href="#new-schedule" class="new-schedule">+Schedule</a></li> -->
+        <li><i class="fa fa-plus" aria-hidden="true"></i></li>
+        <li><a href id = "outbox">outbox</a></li>
       </ul>
     </header>
 
     <div class='main' role="main">
-
+      <a href="http://www.scheduled.email/auth/google_oauth2/new?redirect_to=http://localhost:8080">Sign In</a>
     </div>
     <!-- bower:js -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/mustache/mustache.js"></script>
     <script src="js/app.js"></script>
@@ -36,12 +36,12 @@
       <div class = "email-create">
         <div class = "sending">
           <label>
-            <input name="email[to]" type='email' class = "send-to" placeholder="&#xf007;" style="font-family:Arial, FontAwesome" />
+            <input name="email[to]" type='email' class = "send-to" placeholder=" To:" style="font-family:Arial, FontAwesome" />
           </label>
         </div>
         <div>
           <label>
-            <input name="email[subject]" type='text' placeholder= "subject"/>
+            <input name="email[subject]" type='text' placeholder= "Subject:"/>
           </label>
         </div>
         <div>
@@ -54,14 +54,22 @@
       <div class = "schedule-send">
         <div class = "send-at">
           <label>
-            <p>Starting At : </p> <input type="text" id = "datepicker" name="email[send_first_at]"  placeholder="&#xf017;" style="font-family:Arial, FontAwesome" />
+            <p>Starting At : </p> <input type="text" id = "datepicker" name="email[send_first_at]"  placeholder="&#xf017;   January 1st, 2016, 5pm" style="font-family:Arial, FontAwesome" />
           </label>
         </div>
+
+        <div class = "send-at">
+          <label>
+            <p>Repeat : </p><input name="email[times]" type='number' id = "every-time" placeholder="&#xf00d; 20" style="font-family:Arial, FontAwesome" />
+          </label>
+        </div>
+
         <div>
           <label>
             <div class = "styled-select">
-            Repeat:
-            <select name="email[every_n_minutes]">
+            <p>Every:</p>
+            <select name="email[every_n_minutes]" class="place_holder dropdown">
+             <option selected="selected" style=" display: none;">Repeat</option>
               <option value="{{#daysToMinutes}}1{{/daysToMinutes}}">Daily</option>
               <option value="{{#daysToMinutes}}2{{/daysToMinutes}}">2 Days</option>
               <option value="{{#daysToMinutes}}3{{/daysToMinutes}}">3 Days</option>
@@ -75,11 +83,7 @@
            </div>
           </label>
         </div>
-        <div class = "send-at">
-          <label>
-            <p>Every : </p><input name="email[times]" type='number' id = "every-time" placeholder="&#xf0d8; Month" style="font-family:Arial, FontAwesome" />
-          </label>
-        </div>
+
         <div>
           <button>Submit</button>
           <a href id = "schedule">Schedule</a>

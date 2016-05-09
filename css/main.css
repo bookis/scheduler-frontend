@@ -17,6 +17,7 @@ body, html {
 
 a {
   text-decoration: none;
+  color: blue;
 }
 
 .create-email input {
@@ -62,7 +63,7 @@ a#schedule, a#confirm-button {
 .styled-select select {
   width: 200px;
   -webkit-appearance: menulist-button;
-  height: 50px;
+  height: 80px;
 }
 
 button.go-back {
@@ -132,7 +133,9 @@ button:disabled {
 }
 
 header {
-  height: 80px;
+  height: 50px;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 header li {
@@ -153,8 +156,8 @@ input {
 }
 
 input:placeholder-shown {
-  font-size: 30px;
-  padding-left: 20px;
+  font-size: 25px;
+  padding-left: 10px;
 }
 
 ::-webkit-input-placeholder {
@@ -183,6 +186,7 @@ input:placeholder-shown {
   max-width: 68em;
   margin-left: auto;
   margin-right: auto;
+  margin-left: 0;
 }
 .schedule-send::after {
   clear: both;
@@ -220,21 +224,6 @@ input:placeholder-shown {
   margin-right: 0;
 }
 
-.sending {
-  position: relative;
-}
-
-.sending input {
-  text-indent: 30px;
-}
-
-.sending .fa-user {
-  position: absolute;
-  top: 24px;
-  left: 7px;
-  font-size: 30px;
-}
-
 .blue-box {
   background-color: blue;
   height: 400px;
@@ -242,11 +231,10 @@ input:placeholder-shown {
   color: white;
   font-weight: bold;
   padding-top: 30px;
-  margin-left: 0px;
-  margin-right: 0px;
   max-width: 68em;
   margin-left: auto;
   margin-right: auto;
+  margin-left: 0px;
 }
 .blue-box::after {
   clear: both;
@@ -274,6 +262,23 @@ input:placeholder-shown {
 }
 .product-info:last-child {
   margin-right: 0;
+}
+
+#outbox {
+  border: 2px solid blue;
+  margin-top: 30px;
+  font-size: 14px;
+  padding: 10px;
+  border-radius: 20px;
+  width: 300px;
+}
+
+.place_holder {
+  color: gray;
+}
+
+option {
+  color: #000000;
 }
 
 .emails-container {
