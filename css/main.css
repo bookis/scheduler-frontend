@@ -11,8 +11,17 @@ body, html {
   margin: 0px;
 }
 
-.nav {
+.nav ul {
   margin: 0px;
+  font-size: 25px;
+  padding-right: 40px;
+  float: right;
+  list-style-type: none;
+}
+
+.nav li {
+  display: inline-block;
+  margin: 30px;
 }
 
 a {
@@ -34,12 +43,12 @@ form {
 }
 
 form input {
-  border: 3px solid #D3D3D3;
+  border: 3px solid #efefef;
 }
 
 a#schedule, a#confirm-button {
   border: 1px solid;
-  background-color: #ff7400;
+  background-color: #ff5817;
   height: 80px;
   width: 345.56px;
   display: block;
@@ -134,16 +143,7 @@ button:disabled {
 
 header {
   height: 50px;
-  margin-top: 10px;
-  margin-bottom: 20px;
-}
-
-header li {
-  color: red;
-  font-size: 25px;
-  display: inline-block;
-  padding-right: 40px;
-  float: right;
+  margin-bottom: 10px;
 }
 
 .create-schedule {
@@ -225,7 +225,7 @@ input:placeholder-shown {
 }
 
 .blue-box {
-  background-color: blue;
+  background-color: #0a7bff;
   height: 400px;
   margin-top: 50px;
   color: white;
@@ -264,13 +264,17 @@ input:placeholder-shown {
   margin-right: 0;
 }
 
+img {
+  width: 400px;
+}
+
 #outbox {
   border: 2px solid blue;
   margin-top: 30px;
   font-size: 14px;
   padding: 10px;
   border-radius: 20px;
-  width: 300px;
+  width: 200px;
 }
 
 .place_holder {
@@ -310,7 +314,7 @@ option {
 }
 
 .email-body input {
-  height: 400px;
+  height: 300px;
 }
 
 .email-master {

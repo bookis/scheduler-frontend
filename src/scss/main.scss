@@ -6,8 +6,16 @@ font-family: $helvetica;
 margin:0px;
 }
 
-.nav{
+.nav ul{
   margin:0px;
+  font-size:25px;
+  padding-right:40px;
+  float:right;
+  list-style-type: none;
+}
+.nav li{
+  display:inline-block;
+  margin:30px;
 }
 
 a{
@@ -29,12 +37,12 @@ form{
 }
 
 form input{
-  border:3px solid #D3D3D3;
+  border:3px solid #efefef;
 }
 
 a#schedule, a#confirm-button {
   border:1px solid ;
-  background-color:#ff7400;
+  background-color:#ff5817;
   height:80px;
   width:345.56px;
   display:block;
@@ -75,18 +83,8 @@ button{
 
 header{
   height:50px;
-  margin-top:10px;
-  margin-bottom:20px;
+  margin-bottom:10px;
 }
-
-header li{
-  color:red;
-  font-size:25px;
-  display:inline-block;
-  padding-right:40px;
-  float:right;
-}
-
 .create-schedule {
   display: none;
 }
@@ -135,10 +133,8 @@ input:placeholder-shown {
   @include span-columns(4);
 
 }
-
-
 .blue-box{
-  background-color:blue;
+  background-color:#0a7bff;
   height:400px;
   margin-top:50px;
   color:white;
@@ -153,10 +149,12 @@ input:placeholder-shown {
   padding-left:40px;
 
 }
-
 .product-info{
   @include span-columns(6);
   padding-right:40px;
+}
+img{
+  width:400px;
 }
 
 #outbox{
@@ -165,7 +163,7 @@ input:placeholder-shown {
   font-size:14px;
   padding:10px;
   border-radius:20px;
-  width:300px;
+  width:200px;
 }
 
 .place_holder{
@@ -174,8 +172,6 @@ input:placeholder-shown {
 option{
     color: #000000;
 }
-
-
 
 
 
@@ -209,7 +205,7 @@ option{
   margin-bottom:300px;
 }
 .email-body input{
-  height:400px;
+  height:300px;
 }
 
 .email-master{

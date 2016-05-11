@@ -9,18 +9,27 @@
   </head>
   <body>
     <header>
-      <ul class='nav' role='nav'>
-        <li><a href="http://www.scheduled.email/sign-out?redirect_to=http://localhost:8080" class='new-window'>Sign Out</a>
-        <!-- <li><a href="#new-schedule" class="new-schedule">+Schedule</a></li> -->
-        <li><i class="fa fa-plus" aria-hidden="true"></i></li>
-        <li><a href id = "outbox">outbox</a></li>
-      </ul>
+      <div class='nav' role='nav'>
+        <ul>
+          <li>
+            <a href="http://www.scheduled.email/sign-out?redirect_to=http://localhost:8080" class='new-window'>Sign Out</a>
+          <!-- <li><a href="#new-schedule" class="new-schedule">+Schedule</a></li> -->
+          </li>
+          <li>
+            <a href id = "outbox">outbox</a>
+          </li>
+          <li>
+            <i class="fa fa-plus" aria-hidden="true"></i>
+          </li>
+        </ul>
+      </div>
     </header>
 
     <div class='main' role="main">
       <a href="http://www.scheduled.email/auth/google_oauth2/new?redirect_to=http://localhost:8080">Sign In</a>
     </div>
     <!-- bower:js -->
+
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/mustache/mustache.js"></script>
     <script src="js/app.js"></script>
@@ -83,9 +92,7 @@
            </div>
           </label>
         </div>
-
         <div>
-          <button>Submit</button>
           <a href id = "schedule">Schedule</a>
         </div>
       </div>
@@ -94,7 +101,7 @@
 
       <div class = "blue-box">
         <div class = "envelope">
-          <p>Placeholder for image</p>
+          <img src = "css/envelope.jpg">
         </div>
         <div class = "product-info">
           <p>

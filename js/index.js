@@ -1,4 +1,6 @@
 $( document ).ready(function() {
+  
+  $('#datepicker').attr("placeholder", Date());
 
   $('body').on('click', '#datepicker', function(){
   //   // (use remove class versus toggle for schedule send)
@@ -12,5 +14,8 @@ $( document ).ready(function() {
   //     parent.history.back();
   //     return false;
   })
+
+
+
 
 });
