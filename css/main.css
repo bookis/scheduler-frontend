@@ -38,6 +38,13 @@ a {
   display: none;
 }
 
+.sign-in {
+  text-align: center;
+  height: 500px;
+  margin-top: 250px;
+  font-size: 30px;
+}
+
 .create-email input {
   width: 100%;
   height: 40px;
@@ -160,7 +167,7 @@ input {
 }
 
 input:placeholder-shown {
-  font-size: 25px;
+  font-size: 18px;
   padding-left: 10px;
 }
 
@@ -183,7 +190,7 @@ input:placeholder-shown {
 }
 
 #every-time {
-  font-size: 30px;
+  font-size: 18px;
 }
 
 .schedule-send {
@@ -230,7 +237,7 @@ input:placeholder-shown {
 
 .blue-box {
   background-color: #0a7bff;
-  height: 400px;
+  height: 450px;
   margin-top: 50px;
   color: white;
   font-weight: bold;
@@ -270,7 +277,7 @@ input:placeholder-shown {
 }
 
 img {
-  width: 400px;
+  width: 500px;
 }
 
 .outbox {
@@ -278,14 +285,18 @@ img {
   border: 2px solid blue;
   margin-top: 30px;
   font-size: 14px;
-  padding: 10px;
   border-radius: 20px;
   width: 100px;
   text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .place_holder {
-  color: gray;
+  color: black;
+  background-color: white;
+  font-size: 18px;
+  border: 3px solid #efefef;
 }
 
 option {
@@ -320,8 +331,10 @@ option {
   margin-bottom: 300px;
 }
 
-.email-body input {
+.email-body textarea {
   height: 300px;
+  width: 100%;
+  border: 3px solid #efefef;
 }
 
 .email-master {

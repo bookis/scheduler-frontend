@@ -11,16 +11,5 @@ $( document ).ready(function() {
 
   })
 
-  $('body').on('click', '#plus', function(){
-      console.log("havplenty");
-      $('.email-create').toggle();
-      $('.blue-box').css("background-color", "red");
-      // $('.blue-box').css("margin-top", "0px");
-    })
-
-  $('body').on('click', '.outbox', function(){
-      $('.emails-container').toggle();
-      $('.email-container').toggle();
-    })
 
 });
