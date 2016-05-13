@@ -12,15 +12,15 @@ $( document ).ready(function() {
   })
 
   $('body').on('click', '#plus', function(){
-      console.log("havplenty");
-      $('.email-create').toggle();
-      $('.blue-box').css("background-color", "red");
-      // $('.blue-box').css("margin-top", "0px");
+      $('.email-form').toggle();
+      return false;
     })
 
   $('body').on('click', '.outbox', function(){
+      console.log("help")
       $('.emails-container').toggle();
       $('.email-container').toggle();
+      return false;
     })
 
 });
