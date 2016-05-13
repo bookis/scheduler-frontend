@@ -28,9 +28,10 @@ a{
   color:blue;
 }
 
-.create-email{
-  display:none;
-}
+// .create-email{
+//   display:none;
+// }
+
 .sign-in{
  text-align:center;
  height:500px;
@@ -74,13 +75,15 @@ a#schedule, a#confirm-button {
   float:right;
 }
 
+a#schedule{
+  margin-bottom:60px;
+}
 .schedule-send input{
   width:100%;
   height:80px;
 }
 
 .styled-select select{
-  width:200px;
   -webkit-appearance: menulist-button;
   height: 80px;
 }
@@ -130,9 +133,8 @@ input:placeholder-shown {
 }
 
 .schedule-send {
-  @include outer-container();
    margin-left: 0;
-  //  max-width:140em;
+  margin-bottom:30px;
 }
 .send-at{
 @include span-columns(4);
@@ -152,7 +154,6 @@ input:placeholder-shown {
   padding-top:30px;
   clear: both;
   // margin-right:0px;
-  @include outer-container();
   margin-left:0px;
 }
 .envelope{
@@ -185,6 +186,7 @@ img{
   background-color:white;
   font-size:18px;
   border: 3px solid #efefef;
+  width:100%;
 }
 option{
     color: #000000;
