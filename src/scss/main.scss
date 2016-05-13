@@ -6,6 +6,10 @@ font-family: $helvetica;
 margin:0px;
 }
 
+.nav{
+  display:none;
+}
+
 .nav ul{
   margin:0px;
   font-size:25px;
@@ -92,7 +96,7 @@ input{
 }
 
 input:placeholder-shown {
-  font-size:25px;
+  font-size:18px;
   padding-left:10px;
 }
 
@@ -113,12 +117,13 @@ input:placeholder-shown {
 }
 
 #every-time{
-  font-size:30px;
+  font-size:18px;
 }
 
 .schedule-send {
   @include outer-container();
    margin-left: 0;
+  //  max-width:140em;
 }
 .send-at{
 @include span-columns(4);
@@ -128,7 +133,6 @@ input:placeholder-shown {
 }
 .send-number{
   @include span-columns(4);
-
 }
 .blue-box{
   background-color:#0a7bff;
@@ -137,8 +141,7 @@ input:placeholder-shown {
   color:white;
   font-weight:bold;
   padding-top:30px;
-  // margin-right:0px;
-  @include outer-container();
+
   margin-left:0px;
 }
 .envelope{
@@ -159,11 +162,11 @@ img{
   border:2px solid blue;
   margin-top:30px;
   font-size:14px;
-  padding:10px;
   border-radius:20px;
   width:100px;
   text-align:center;
-
+  padding-top:5px;
+  padding-bottom:5px;
 }
 
 .place_holder{

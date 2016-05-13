@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-  
+
   $('#datepicker').attr("placeholder", Date());
 
   $('body').on('click', '#datepicker', function(){
@@ -15,7 +15,9 @@ $( document ).ready(function() {
   //     return false;
   })
 
-
-
+  $('body').on('click', '.fa-plus'), function(){
+      console.log('help')
+     $('.create-email').toggle();
+  }
 
 });
