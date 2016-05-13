@@ -5,7 +5,9 @@ body, html{
 font-family: $helvetica;
 margin:0px;
 }
-
+.nav{
+  display:none;
+}
 .nav ul{
   margin:0px;
   font-size:25px;
@@ -173,19 +175,20 @@ option{
     color: #000000;
 }
 
-
 .emails-container{
   float:left;
   width:350px;
   border-right:1px solid black;
   padding-left:10px;
   height:100%;
+  display:none;
 }
 
 .email-container{
   float:right;
   width:800px;
   margin-left:30px;
+  display:none;
 }
 
 .email-container li{

@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-  
+
   $('#datepicker').attr("placeholder", Date());
 
   $('body').on('click', '#datepicker', function(){
@@ -8,14 +8,12 @@ $( document ).ready(function() {
   //   $('.email-create').toggle();
     var picker = new Pikaday({ field: $('#datepicker')[0], reposition:false });
     return false;
-  // })
-  //
-  // $('body').on('click', '.go-back', function(){
-  //     parent.history.back();
-  //     return false;
+
   })
 
-
-
+  $('body').on('click', '.outbox', function(){
+      $('.emails-container').toggle();
+      $('.email-container').toggle();
+    })
 
 });
