@@ -10,7 +10,7 @@ $( document ).ready(function() {
     return false;
 
   })
-  //
+
   $('body').on('click', '#plus', function(){
       console.log("havplenty");
       $('.email-create').toggle();
@@ -22,7 +22,5 @@ $( document ).ready(function() {
       $('.emails-container').toggle();
       $('.email-container').toggle();
     })
-
-
 
 });
