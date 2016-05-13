@@ -34,6 +34,10 @@ a {
   color: blue;
 }
 
+.create-email {
+  display: none;
+}
+
 .create-email input {
   width: 100%;
   height: 40px;

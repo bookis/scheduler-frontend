@@ -6,7 +6,6 @@ class GmailApp.Main
     Mustache.parse(@welcomeView)
     this.render =>
       $('.nav').toggle()
-      console.log("header logic")
       this.renderEmails()
 
   renderEmails: (callback) ->
