@@ -15,9 +15,5 @@ $( document ).ready(function() {
   //     return false;
   })
 
-  $('body').on('click', '.fa-plus'), function(){
-      console.log('help')
-     $('.create-email').toggle();
-  }
 
 });

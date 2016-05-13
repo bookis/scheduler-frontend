@@ -103,8 +103,6 @@
       Mustache.parse(this.welcomeView);
       this.render((function(_this) {
         return function() {
-          $('.nav').toggle();
-          console.log("header logic");
           return _this.renderEmails();
         };
       })(this));
