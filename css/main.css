@@ -11,10 +11,6 @@ body, html {
   margin: 0px;
 }
 
-.nav {
-  display: none;
-}
-
 .nav ul {
   margin: 0px;
   font-size: 25px;
@@ -32,6 +28,13 @@ body, html {
 a {
   text-decoration: none;
   color: blue;
+}
+
+.sign-in {
+  text-align: center;
+  height: 500px;
+  margin-top: 250px;
+  font-size: 30px;
 }
 
 .create-email input {
@@ -226,7 +229,7 @@ input:placeholder-shown {
 
 .blue-box {
   background-color: #0a7bff;
-  height: 400px;
+  height: 450px;
   margin-top: 50px;
   color: white;
   font-weight: bold;
@@ -257,7 +260,7 @@ input:placeholder-shown {
 }
 
 img {
-  width: 400px;
+  width: 500px;
 }
 
 .outbox {
@@ -273,7 +276,10 @@ img {
 }
 
 .place_holder {
-  color: gray;
+  color: black;
+  background-color: white;
+  font-size: 18px;
+  border: 3px solid #efefef;
 }
 
 option {
@@ -308,8 +314,10 @@ option {
   margin-bottom: 300px;
 }
 
-.email-body input {
+.email-body textarea {
   height: 300px;
+  width: 100%;
+  border: 3px solid #efefef;
 }
 
 .email-master {
