@@ -9,6 +9,8 @@ $( document ).ready(function() {
 
   $('body').on('click', '#plus', function(){
       $('.email-form').toggle();
+      $('.emails-container').hide();
+      $('.email-container').hide();
       return false;
     })
 
