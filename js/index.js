@@ -18,6 +18,8 @@ $( document ).ready(function() {
 
   $('body').on('click', '.outbox', function(){
       console.log("help")
+      $('.blue-box').hide();
+      $('.email-form').hide();
       $('.emails-container').toggle();
       $('.email-container').toggle();
       return false;

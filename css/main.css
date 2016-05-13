@@ -34,7 +34,7 @@ a {
   color: blue;
 }
 
-.create-email {
+.email-form {
   display: none;
 }
 
@@ -62,11 +62,11 @@ form input {
   border: 3px solid #efefef;
 }
 
-a#schedule, a#confirm-button {
+a#schedule {
   border: 1px solid;
   background-color: #ff5817;
   height: 80px;
-  width: 345.56px;
+  width: 393.83px;
   display: block;
   border-radius: 5px;
   text-align: center;
@@ -78,9 +78,6 @@ a#schedule, a#confirm-button {
   margin-top: 30px;
   margin-right: 20px;
   float: right;
-}
-
-a#schedule {
   margin-bottom: 60px;
 }
 
@@ -298,12 +295,14 @@ option {
   border-right: 1px solid black;
   padding-left: 10px;
   height: 100%;
+  display: none;
 }
 
 .email-container {
   float: right;
   width: 800px;
   margin-left: 30px;
+  display: none;
 }
 
 .email-container li {
