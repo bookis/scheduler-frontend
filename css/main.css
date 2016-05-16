@@ -52,6 +52,7 @@ a {
   border-radius: 5px;
   font-size: 16px;
   margin-bottom: 5px;
+  padding-left: 10px;
 }
 
 form {
@@ -60,7 +61,8 @@ form {
 }
 
 form input {
-  border: 3px solid #efefef;
+  border: 1px solid #ddd;
+  border-radius: 5px;
 }
 
 .schedule-send input {
@@ -225,7 +227,7 @@ a.schedule {
   border-radius: 5px;
   text-align: center;
   color: white;
-  font-size: 30px;
+  font-size: 2em;
   font-weight: bold;
   vertical-align: middle;
   padding-top: 20px;
@@ -242,7 +244,7 @@ a.schedule:last-child {
 }
 
 .blue-box {
-  background-color: #0a7bff;
+  background-color: #42A5F5;
   height: 450px;
   margin-top: 50px;
   color: white;
@@ -269,13 +271,14 @@ a.schedule:last-child {
   margin-right: 2.35765%;
   width: 48.82117%;
   padding-right: 40px;
+  margin-right: 0;
 }
 .product-info:last-child {
   margin-right: 0;
 }
 
 img {
-  width: 500px;
+  width: 100%;
 }
 
 .outbox {
@@ -294,8 +297,9 @@ img {
   color: black;
   background-color: white;
   font-size: 16px;
-  border: 3px solid #efefef;
+  border: 1px solid #ddd;
   width: 100%;
+  border-radius: 5px;
 }
 
 option {
@@ -335,8 +339,9 @@ option {
 .email-body textarea {
   height: 300px;
   width: 100%;
-  border: 3px solid #efefef;
+  border: 1px solid #ddd;
   font-size: 16px;
+  border-radius: 5px;
 }
 
 .email-master {
