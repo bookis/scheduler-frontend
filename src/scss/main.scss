@@ -32,6 +32,10 @@ a{
   display:none;
 }
 
+.angel-logo{
+  width:500px;
+}
+
 .sign-in{
  text-align:center;
  height:500px;
@@ -154,7 +158,7 @@ a.schedule {
 
 .blue-box{
   background-color:#42A5F5;
-  height:450px;
+  height:480px;
   margin-top:50px;
   color:white;
   font-weight:bold;
@@ -165,6 +169,7 @@ a.schedule {
 .envelope{
   @include span-columns(6);
   padding-left:40px;
+  padding-bottom:40px;
 }
 .product-info{
   @include span-columns(6);
