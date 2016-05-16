@@ -57,24 +57,6 @@ form input{
   border:3px solid #efefef;
 }
 
-a#schedule {
-  border:1px solid ;
-  background-color:#ff5817;
-  height:80px;
-  width:393.83px;
-  display:block;
-  border-radius:5px;
-  text-align:center;
-  color:white;
-  font-size:30px;
-  font-weight:bold;
-  vertical-align:middle;
-  padding-top:20px;
-  margin-top:30px;
-  float:right;
-  margin-bottom:60px;
-}
-
 .schedule-send input{
   width:100%;
   height:80px;
@@ -135,8 +117,8 @@ input:placeholder-shown {
 }
 
 .schedule-send {
-   margin-left: 0;
-  margin-bottom:30px;
+ margin-left: 0;
+ margin-bottom:30px;
 }
 .send-at{
 @include span-columns(4);
@@ -147,6 +129,25 @@ input:placeholder-shown {
 .send-number{
   @include span-columns(4);
 }
+
+a.schedule {
+  border:1px solid ;
+  background-color:#ff5817;
+  height:80px;
+  display:block;
+  border-radius:5px;
+  text-align:center;
+  color:white;
+  font-size:30px;
+  font-weight:bold;
+  vertical-align:middle;
+  padding-top:20px;
+  margin-top:30px;
+  margin-bottom:60px;
+  @include span-columns(4);
+  @include shift(8);
+}
+
 .blue-box{
   background-color:#0a7bff;
   height:450px;
@@ -166,6 +167,7 @@ input:placeholder-shown {
   @include span-columns(6);
   padding-right:40px;
 }
+
 img{
   width:500px;
 }
