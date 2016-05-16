@@ -18,7 +18,7 @@
             <div class = "outbox"><a href id = "outbox">outbox</a></div>
           </li>
           <li>
-            <i class="fa fa-plus" aria-hidden="true"></i>
+            <a href id= "plus"><i class="fa fa-plus" aria-hidden="true"></i></a>
           </li>
         </ul>
       </div>
@@ -26,6 +26,7 @@
 
     <div class='main' role="main">
       <div class = "sign-in">
+        <img src = "angelemail.png"></img>
         <a href="http://www.scheduled.email/auth/google_oauth2/new?redirect_to=http://localhost:8080" class = "sign-in">Sign In</a>
       </div>
     </div>
@@ -41,9 +42,9 @@
       <div class='alert errors-schedule'>
       </div>
 
-      <form class='create-email'>
+      <form class='email-form'>
 
-      <div class = "email-create">
+      <div class = "email-form-compose">
         <div class = "sending">
           <label>
             <input name="email[to]" type='email' class = "send-to" placeholder=" To:" style="font-family:Arial, FontAwesome" />
@@ -64,13 +65,13 @@
       <div class = "schedule-send">
         <div class = "send-at">
           <label>
-            <p>Starting At : </p> <input type="text" id = "datepicker" name="email[send_first_at]"  placeholder="&#xf017;   January 1st, 2016, 5pm" style="font-family:Arial, FontAwesome" />
+            <p>Starting At : </p> <input type="text" id = "datepicker" name="email[send_first_at]"  placeholder="&#xf017;  January 1st, 2016, 5pm" />
           </label>
         </div>
 
         <div class = "send-at">
           <label>
-            <p>Repeat : </p><input name="email[times]" type='number' id = "every-time" placeholder="&#xf00d; 20" style="font-family:Arial, FontAwesome" />
+            <p>Repeat : </p><input name="email[times]" type='number' id = "every-time" placeholder="&#xf00d; 20" />
           </label>
         </div>
 
@@ -94,7 +95,7 @@
           </label>
         </div>
         <div>
-          <a href id = "schedule">Schedule</a>
+          <a href class = "schedule">Schedule</a>
         </div>
       </div>
 

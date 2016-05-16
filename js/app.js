@@ -103,6 +103,7 @@
       Mustache.parse(this.welcomeView);
       this.render((function(_this) {
         return function() {
+          $('.nav').toggle();
           return _this.renderEmails();
         };
       })(this));

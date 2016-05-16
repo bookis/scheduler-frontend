@@ -6,9 +6,9 @@ font-family: $helvetica;
 margin:0px;
 }
 
-// .nav{
-//   display:none;
-// }
+.nav{
+  display:none;
+}
 
 .nav ul{
   margin:0px;
@@ -28,15 +28,19 @@ a{
   color:blue;
 }
 
+.email-form{
+  display:none;
+}
+
 .sign-in{
  text-align:center;
  height:500px;
- margin-top:250px;
+ margin-top:150px;
  font-size:30px;
+ display:block;
  }
 
-
-.create-email input{
+.email-form-compose input{
   width:100%;
   height:40px;
   border-radius:5px;
@@ -53,31 +57,12 @@ form input{
   border:3px solid #efefef;
 }
 
-a#schedule, a#confirm-button {
-  border:1px solid ;
-  background-color:#ff5817;
-  height:80px;
-  width:345.56px;
-  display:block;
-  border-radius:5px;
-  text-align:center;
-  color:white;
-  font-size:30px;
-  font-weight:bold;
-  vertical-align:middle;
-  padding-top:20px;
-  margin-top:30px;
-  margin-right:20px;
-  float:right;
-}
-
 .schedule-send input{
   width:100%;
   height:80px;
 }
 
 .styled-select select{
-  width:200px;
   -webkit-appearance: menulist-button;
   height: 80px;
 }
@@ -124,12 +109,16 @@ input:placeholder-shown {
 
 #every-time{
   font-size:18px;
+  font-family:Arial, FontAwesome;
+}
+
+#datepicker{
+  font-family:Arial, FontAwesome;
 }
 
 .schedule-send {
-  @include outer-container();
-   margin-left: 0;
-  //  max-width:140em;
+ margin-left: 0;
+ margin-bottom:30px;
 }
 .send-at{
 @include span-columns(4);
@@ -140,6 +129,25 @@ input:placeholder-shown {
 .send-number{
   @include span-columns(4);
 }
+
+a.schedule {
+  border:1px solid ;
+  background-color:#ff5817;
+  height:80px;
+  display:block;
+  border-radius:5px;
+  text-align:center;
+  color:white;
+  font-size:30px;
+  font-weight:bold;
+  vertical-align:middle;
+  padding-top:20px;
+  margin-top:30px;
+  margin-bottom:60px;
+  @include span-columns(4);
+  @include shift(8);
+}
+
 .blue-box{
   background-color:#0a7bff;
   height:450px;
@@ -147,7 +155,7 @@ input:placeholder-shown {
   color:white;
   font-weight:bold;
   padding-top:30px;
-
+  clear: both;
   margin-left:0px;
 }
 .envelope{
@@ -159,6 +167,7 @@ input:placeholder-shown {
   @include span-columns(6);
   padding-right:40px;
 }
+
 img{
   width:500px;
 }
@@ -180,6 +189,7 @@ img{
   background-color:white;
   font-size:18px;
   border: 3px solid #efefef;
+  width:100%;
 }
 option{
     color: #000000;
@@ -191,12 +201,14 @@ option{
   border-right:1px solid black;
   padding-left:10px;
   height:100%;
+  display:none;
 }
 
 .email-container{
   float:right;
   width:800px;
   margin-left:30px;
+  display:none;
 }
 
 .email-container li{
