@@ -15,7 +15,7 @@ $( document ).ready(function() {
     })
 
   $('body').on('click', '.outbox', function(){
-      $('.blue-box').hide();
+      $('.blue-box').toggle();
       $('.email-form').hide();
       $('.emails-container').toggle();
       $('.email-container').toggle();

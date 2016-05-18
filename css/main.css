@@ -18,14 +18,50 @@ body, html {
 .nav ul {
   margin: 0px;
   font-size: 25px;
-  padding-right: 40px;
-  float: right;
   list-style-type: none;
+}
+@media screen and (max-width: 480px) {
+  .nav ul {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    padding-left: 0px;
+    text-align: center;
+  }
+  .nav ul:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 850px) {
+  .nav ul {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+    float: right;
+  }
+  .nav ul:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .nav ul {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    padding-left: 0px;
+    text-align: center;
+  }
+  .nav ul:last-child {
+    margin-right: 0;
+  }
 }
 
 .nav li {
   display: inline-block;
-  margin-right: 30px;
+  margin-left: 20px;
   margin-bottom: 10px;
 }
 
@@ -193,34 +229,73 @@ input:placeholder-shown {
   margin-bottom: 30px;
 }
 
-.send-at {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 31.76157%;
+@media screen and (max-width: 480px) {
+  .send-at {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+  }
+  .send-at:last-child {
+    margin-right: 0;
+  }
 }
-.send-at:last-child {
-  margin-right: 0;
+@media screen and (min-width: 850px) {
+  .send-at {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+  }
+  .send-at:last-child {
+    margin-right: 0;
+  }
 }
 
-.styled-select {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 31.76157%;
+@media screen and (max-width: 480px) {
+  .styled-select {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+  }
+  .styled-select:last-child {
+    margin-right: 0;
+  }
 }
-.styled-select:last-child {
-  margin-right: 0;
+@media screen and (min-width: 850px) {
+  .styled-select {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+  }
+  .styled-select:last-child {
+    margin-right: 0;
+  }
 }
 
-.send-number {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 31.76157%;
+@media screen and (max-width: 480px) {
+  .send-number {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+  }
+  .send-number:last-child {
+    margin-right: 0;
+  }
 }
-.send-number:last-child {
-  margin-right: 0;
+@media screen and (min-width: 850px) {
+  .send-number {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+  }
+  .send-number:last-child {
+    margin-right: 0;
+  }
 }
 
 a.schedule {
@@ -237,19 +312,33 @@ a.schedule {
   padding-top: 20px;
   margin-top: 30px;
   margin-bottom: 60px;
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 31.76157%;
-  margin-left: 68.23843%;
 }
-a.schedule:last-child {
-  margin-right: 0;
+@media screen and (max-width: 480px) {
+  a.schedule {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+  }
+  a.schedule:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 850px) {
+  a.schedule {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+    margin-left: 68.23843%;
+  }
+  a.schedule:last-child {
+    margin-right: 0;
+  }
 }
 
 .blue-box {
   background-color: #42A5F5;
-  height: 480px;
   margin-top: 50px;
   color: white;
   font-weight: bold;
@@ -257,29 +346,98 @@ a.schedule:last-child {
   clear: both;
   margin-left: 0px;
 }
+@media screen and (max-width: 480px) {
+  .blue-box {
+    height: 700px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .blue-box {
+    height: 700px;
+  }
+}
+@media screen and (min-width: 850px) {
+  .blue-box {
+    height: 480px;
+  }
+}
 
-.envelope {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 48.82117%;
-  padding-left: 40px;
-  padding-bottom: 40px;
+@media screen and (max-width: 480px) {
+  .envelope {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 65.88078%;
+    margin-left: 17.05961%;
+  }
+  .envelope:last-child {
+    margin-right: 0;
+  }
 }
-.envelope:last-child {
-  margin-right: 0;
+@media screen and (min-width: 850px) {
+  .envelope {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+    padding-left: 40px;
+    padding-bottom: 40px;
+  }
+  .envelope:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .envelope {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 65.88078%;
+    margin-left: 17.05961%;
+  }
+  .envelope:last-child {
+    margin-right: 0;
+  }
 }
 
-.product-info {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 48.82117%;
-  padding-right: 40px;
-  margin-right: 0;
+@media screen and (max-width: 480px) {
+  .product-info {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .product-info:last-child {
+    margin-right: 0;
+  }
 }
-.product-info:last-child {
-  margin-right: 0;
+@media screen and (min-width: 850px) {
+  .product-info {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+    margin-right: 0;
+    padding-right: 40px;
+  }
+  .product-info:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .product-info {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .product-info:last-child {
+    margin-right: 0;
+  }
 }
 
 img {
@@ -313,11 +471,21 @@ option {
 
 .emails-container {
   float: left;
-  width: 350px;
   border-right: 1px solid black;
   padding-left: 10px;
   height: 100%;
   display: none;
+}
+@media screen and (max-width: 480px) {
+  .emails-container {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 14.70196%;
+  }
+  .emails-container:last-child {
+    margin-right: 0;
+  }
 }
 
 .email-container {
