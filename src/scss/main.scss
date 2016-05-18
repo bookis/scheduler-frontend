@@ -19,7 +19,7 @@ margin:0px;
     padding-left:0px;
   }
   @include media ($desktop){
-    @include span-columns(4);
+    @include span-columns(5);
     float:right;
   }
   @include media ($tablet){
@@ -36,6 +36,7 @@ margin:0px;
   display:inline-block;
   margin-left:20px;
   margin-bottom:10px;
+
 }
 
 a{
