@@ -36,7 +36,6 @@ margin:0px;
   display:inline-block;
   margin-left:20px;
   margin-bottom:10px;
-
 }
 
 a{
@@ -275,36 +274,32 @@ option{
     color: #000000;
 }
 
-
 .emails-container{
   @include span-columns(3);
   float:left;
-  border-right:1px solid black;
+  border-right:1px solid #ddd;
   padding-left:10px;
   height:100%;
   display:none;
 }
 .email-container{
-  @include span-columns(7);
-  float:right;
-  width:800px;
-  margin-left:30px;
+  @include span-columns(8);
   display:none;
 }
 
 .email-container h1{
-border-bottom:1px solid #ddd;
+  border-bottom:1px solid #ddd;
+  margin:0px;
 }
-
 .email-container li{
   display:inline-block;
   width:100%;
   margin:0px;
   border-bottom:1px solid #ddd;
 }
-
 .email-container ul{
   padding:0px;
+  margin-top:0px;
 }
 
 .email-body{
@@ -313,25 +308,30 @@ border-bottom:1px solid #ddd;
 .email-body textarea{
   height:300px;
   width:100%;
-  border: 1px solid #ddd;
+  border:1px solid #ddd;
   font-size:16px;
   border-radius:5px;
 }
 
 .email-master{
-  border-top:1px solid #ddd;
+  border-top: 1px solid #ddd;
 }
 .email-master img{
   @include span-columns(2);
-  padding-top:5px;
-  padding-bottom:5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   border-radius: 50%;
 }
-
+.email-master-send, .email-master-to{
+  // display: inline-block;
+  // width:120px;
+}
 .email-master h2{
-  font-size:10px;
+  font-size: 12px;
+  margin-bottom: 0px;
+  margin-top:0px;
 }
 .email-master p{
-  margin-bottom:0px;
-  font-size:12px;
+  margin-bottom: 0px;
+  font-size: 12px;
 }

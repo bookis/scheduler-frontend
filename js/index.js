@@ -22,4 +22,9 @@ $( document ).ready(function() {
       return false;
     })
 
+  $('body').on('click', '.email-master', function(){
+      $('.email-master').css("background-color", "#ddd");
+      return false;
+    })
+
 });
