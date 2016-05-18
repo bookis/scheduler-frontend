@@ -45,7 +45,7 @@ body, html {
     margin-right: 0;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 850px) {
   .nav ul {
     float: left;
     display: block;
@@ -351,7 +351,7 @@ a.schedule {
     height: 700px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 850px) {
   .blue-box {
     height: 700px;
   }
@@ -387,7 +387,7 @@ a.schedule {
     margin-right: 0;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 850px) {
   .envelope {
     float: left;
     display: block;
@@ -426,7 +426,7 @@ a.schedule {
     margin-right: 0;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 850px) {
   .product-info {
     float: left;
     display: block;
