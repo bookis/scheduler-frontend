@@ -15,8 +15,8 @@ margin:0px;
 .nav ul{
   @include media($mobile){
     @include span-columns(12);
-    padding-left:0px;
     text-align:center;
+    padding-left:0px;
   }
   @include media ($desktop){
     @include span-columns(4);
@@ -24,8 +24,8 @@ margin:0px;
   }
   @include media ($tablet){
     @include span-columns(12);
-    padding-left:0px;
     text-align:center;
+    padding-left:0px;
   }
   margin:0px;
   font-size:25px;
@@ -276,7 +276,7 @@ option{
 
 .emails-container{
   @include media($mobile){
-    @include span-columns(2);
+    @include span-columns(8);
   }
   float:left;
   // width:350px;
