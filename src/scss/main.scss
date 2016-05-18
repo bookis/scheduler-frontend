@@ -179,7 +179,7 @@ a.schedule {
     @include span-columns(4);
     @include shift(8);
   }
-  border:1px solid ;
+  border:1px solid;
   background-color:#ff5817;
   height:80px;
   display:block;
@@ -275,29 +275,32 @@ option{
     color: #000000;
 }
 
+
 .emails-container{
-  @include media($mobile){
-    @include span-columns(8);
-  }
+  @include span-columns(3);
   float:left;
-  // width:350px;
   border-right:1px solid black;
   padding-left:10px;
   height:100%;
   display:none;
 }
-
 .email-container{
+  @include span-columns(7);
   float:right;
   width:800px;
   margin-left:30px;
   display:none;
 }
 
+.email-container h1{
+border-bottom:1px solid #ddd;
+}
+
 .email-container li{
   display:inline-block;
-  width:300px;
+  width:100%;
   margin:0px;
+  border-bottom:1px solid #ddd;
 }
 
 .email-container ul{
@@ -316,9 +319,19 @@ option{
 }
 
 .email-master{
-  border-top:1px solid black;
+  border-top:1px solid #ddd;
+}
+.email-master img{
+  @include span-columns(2);
+  padding-top:5px;
+  padding-bottom:5px;
+  border-radius: 50%;
 }
 
+.email-master h2{
+  font-size:10px;
+}
 .email-master p{
-  font-size:20px;
+  margin-bottom:0px;
+  font-size:12px;
 }

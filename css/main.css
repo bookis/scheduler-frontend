@@ -471,34 +471,42 @@ option {
 
 .emails-container {
   float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%;
+  float: left;
   border-right: 1px solid black;
   padding-left: 10px;
   height: 100%;
   display: none;
 }
-@media screen and (max-width: 480px) {
-  .emails-container {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 65.88078%;
-  }
-  .emails-container:last-child {
-    margin-right: 0;
-  }
+.emails-container:last-child {
+  margin-right: 0;
 }
 
 .email-container {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 57.35098%;
   float: right;
   width: 800px;
   margin-left: 30px;
   display: none;
 }
+.email-container:last-child {
+  margin-right: 0;
+}
+
+.email-container h1 {
+  border-bottom: 1px solid #ddd;
+}
 
 .email-container li {
   display: inline-block;
-  width: 300px;
+  width: 100%;
   margin: 0px;
+  border-bottom: 1px solid #ddd;
 }
 
 .email-container ul {
@@ -518,11 +526,29 @@ option {
 }
 
 .email-master {
-  border-top: 1px solid black;
+  border-top: 1px solid #ddd;
+}
+
+.email-master img {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 14.70196%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 50%;
+}
+.email-master img:last-child {
+  margin-right: 0;
+}
+
+.email-master h2 {
+  font-size: 10px;
 }
 
 .email-master p {
-  font-size: 20px;
+  margin-bottom: 0px;
+  font-size: 12px;
 }
 
 /*# sourceMappingURL=main.css.map */
