@@ -536,8 +536,28 @@ option {
   border-radius: 5px;
 }
 
+.email-master-send h2 {
+  font-size: 12px;
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+}
+.email-master-send h2::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
 .email-master {
   border-top: 1px solid #ddd;
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+}
+.email-master::after {
+  clear: both;
+  content: "";
+  display: table;
 }
 
 .email-master img {
@@ -553,15 +573,21 @@ option {
   margin-right: 0;
 }
 
-.email-master h2 {
-  font-size: 12px;
+.email-master p {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
   margin-bottom: 0px;
-  margin-top: 0px;
+  margin-right: 5px;
+  font-size: 12px;
+}
+.email-master p:last-child {
+  margin-right: 0;
 }
 
-.email-master p {
-  margin-bottom: 0px;
-  font-size: 12px;
+.grey {
+  background-color: red;
 }
 
 /*# sourceMappingURL=main.css.map */
