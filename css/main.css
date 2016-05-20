@@ -67,7 +67,7 @@ body, html {
 
 a {
   text-decoration: none;
-  color: blue;
+  color: #42A5F5;
 }
 
 .email-form {
@@ -446,14 +446,13 @@ img {
 
 .outbox {
   width: 100px;
-  border: 2px solid blue;
-  margin-top: 30px;
+  border: 2px solid #42A5F5;
+  margin-top: 20px;
   font-size: 14px;
   border-radius: 20px;
   width: 100px;
   text-align: center;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 10px;
 }
 
 .place_holder {
@@ -479,6 +478,7 @@ option {
   padding-left: 10px;
   height: 100%;
   display: none;
+  overflow: scroll;
 }
 .emails-container:last-child {
   margin-right: 0;
@@ -501,10 +501,22 @@ option {
 }
 
 .email-container li {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
   display: inline-block;
-  width: 100%;
   margin: 0px;
+  margin-bottom: 20px;
   border-bottom: 1px solid #ddd;
+  font-size: 14px;
+}
+.email-container li:last-child {
+  margin-right: 0;
+}
+
+.email-container li:nth-child(2) {
+  color: #ddd;
 }
 
 .email-container ul {

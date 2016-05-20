@@ -40,7 +40,7 @@ margin:0px;
 
 a{
   text-decoration:none;
-  color:blue;
+  color:#42A5F5;
 }
 
 .email-form{
@@ -252,14 +252,13 @@ img{
 
 .outbox{
   width:100px;
-  border:2px solid blue;
-  margin-top:30px;
+  border:2px solid #42A5F5;
+  margin-top:20px;
   font-size:14px;
   border-radius:20px;
   width:100px;
   text-align:center;
-  padding-top:5px;
-  padding-bottom:5px;
+  padding-top:10px;
 }
 
 .place_holder{
@@ -281,6 +280,7 @@ option{
   padding-left:10px;
   height:100%;
   display:none;
+  overflow: scroll;
 }
 .email-container{
   @include span-columns(8);
@@ -292,14 +292,22 @@ option{
   margin:0px;
 }
 .email-container li{
+  @include span-columns(6);
   display:inline-block;
-  width:100%;
   margin:0px;
+  margin-bottom:20px;
   border-bottom:1px solid #ddd;
+  font-size:14px;
 }
+
+.email-container li:nth-child(2){
+  color: #ddd
+}
+
 .email-container ul{
   padding:0px;
   margin-top:0px;
+
 }
 
 .email-body{
@@ -316,16 +324,21 @@ option{
 .email-master{
   border-top: 1px solid #ddd;
 }
+
+.email-master-to{
+}
+
+.email-master-send{
+
+}
+
 .email-master img{
   @include span-columns(2);
   padding-top: 5px;
   padding-bottom: 5px;
   border-radius: 50%;
 }
-.email-master-send, .email-master-to{
-  // display: inline-block;
-  // width:120px;
-}
+
 .email-master h2{
   font-size: 12px;
   margin-bottom: 0px;

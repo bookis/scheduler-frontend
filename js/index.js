@@ -23,7 +23,8 @@ $( document ).ready(function() {
     })
 
   $('body').on('click', '.email-master', function(){
-      $('.email-master').css("background-color", "#ddd");
+      $(this).css("background-color", "#ddd");
+      // $('.email-master').css("background-color", "red");
       return false;
     })
 

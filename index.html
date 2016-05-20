@@ -125,7 +125,7 @@
         <h1>Subject</h1>
           <ul>
             <li><p>Sent To:</p></li>
-            <li><p>Sent At:</p></li>
+            <li><p>Sent At:12/12/2016, 10:29 AM</p></li>
           </ul>
           <p>
           Body: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
@@ -155,13 +155,15 @@
       {{#emails}}
         <div class='email-master' data-id="{{id}}">
           <img src= "http://www.gravatar.com/avatar">
-          <div class = "email-master-to">
+          <div id = "email-master-to">
             <p>{{to}}</p>
           </div>
-          <div class = "email-master-send">
-            <h2>Date Sending At</h2>
+          <div id ="email-master-send">
+            <h2>12/12/2016, 10:29 AM</h2>
           </div>
-            <h2>{{subject}}</h2>
+          <div class = "email-master-send">
+          <h2>{{subject}}</h2>
+          </div>
         </div>
       {{/emails}}
     </script>
