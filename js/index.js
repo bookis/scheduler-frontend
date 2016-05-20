@@ -24,7 +24,6 @@ $( document ).ready(function() {
 
   $('body').on('click', '.email-master', function(){
       $(this).css("background-color", "#ddd");
-      $('.email-master').css("background-color", '');
       return false;
     })
 
