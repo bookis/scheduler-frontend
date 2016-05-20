@@ -320,14 +320,15 @@ option{
   font-size:16px;
   border-radius:5px;
 }
-.email-master-send h2{
-  font-size:12px;
-  @include outer-container;
-}
 
 .email-master{
   border-top: 1px solid #ddd;
-    @include outer-container
+  font-size:11px;
+  margin-top:0px;
+  @include outer-container
+}
+.wrapper{
+  position:relative;
 }
 .email-master img{
   @include span-columns(2);
@@ -336,13 +337,24 @@ option{
   border-radius: 50%;
 }
 
-.email-master p{
-  @include span-columns(4);
-  margin-bottom: 0px;
-  margin-right:5px;
-  font-size: 12px;
-}
+.email-master-time{
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding-right:5px;
+  font-size:10px;
 
-.grey{
-  background-color:red;
+}
+.email-master-time p{
+    margin-top:0px;
+}
+.email-master-to{
+  font-weight:bold;
+  padding-top:5px;
+}
+.email-master-send p{
+  margin-top:0px;
+}
+.email-master-subject p{
+  margin-top:0px;
 }

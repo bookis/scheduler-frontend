@@ -155,14 +155,18 @@
       {{#emails}}
         <div class='email-master' data-id="{{id}}">
           <img src= "http://www.gravatar.com/avatar">
-          <div id = "email-master-to">
-            <p>{{to}}</p>
-            <p>12/12/2016, 10:29 AM</p>
+          <div class = "wrapper ">
+            <div class = "email-master-time">
+              <p>12/12/2016, 10:29 AM</p>
+            </div>
+            <div class = "email-master-to"
+              <p>{{to}}</p>
+            </div>
+            <div class = "email-master-subject">
+              <p>{{subject}}</p>
+            </div>
           </div>
-          <div class = "email-master-send">
-          <h2>{{subject}}</h2>
-          </div>
-        </div>
+       </div>
       {{/emails}}
     </script>
 

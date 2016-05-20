@@ -536,20 +536,10 @@ option {
   border-radius: 5px;
 }
 
-.email-master-send h2 {
-  font-size: 12px;
-  max-width: 68em;
-  margin-left: auto;
-  margin-right: auto;
-}
-.email-master-send h2::after {
-  clear: both;
-  content: "";
-  display: table;
-}
-
 .email-master {
   border-top: 1px solid #ddd;
+  font-size: 11px;
+  margin-top: 0px;
   max-width: 68em;
   margin-left: auto;
   margin-right: auto;
@@ -558,6 +548,10 @@ option {
   clear: both;
   content: "";
   display: table;
+}
+
+.wrapper {
+  position: relative;
 }
 
 .email-master img {
@@ -573,21 +567,29 @@ option {
   margin-right: 0;
 }
 
-.email-master p {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 31.76157%;
-  margin-bottom: 0px;
-  margin-right: 5px;
-  font-size: 12px;
-}
-.email-master p:last-child {
-  margin-right: 0;
+.email-master-time {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding-right: 5px;
+  font-size: 10px;
 }
 
-.grey {
-  background-color: red;
+.email-master-time p {
+  margin-top: 0px;
+}
+
+.email-master-to {
+  font-weight: bold;
+  padding-top: 5px;
+}
+
+.email-master-send p {
+  margin-top: 0px;
+}
+
+.email-master-subject p {
+  margin-top: 0px;
 }
 
 /*# sourceMappingURL=main.css.map */
