@@ -17,7 +17,7 @@ body, html {
 
 .nav ul {
   margin: 0px;
-  font-size: 25px;
+  font-size: 15px;
   list-style-type: none;
 }
 @media screen and (max-width: 480px) {
@@ -65,9 +65,18 @@ body, html {
   margin-bottom: 10px;
 }
 
+.new-window {
+  font-size: 20px;
+}
+
+.fa.fa-plus {
+  font-size: 20px;
+}
+
 a {
   text-decoration: none;
-  color: blue;
+  color: #42A5F5;
+  margin-top: 10px;
 }
 
 .email-form {
@@ -446,14 +455,13 @@ img {
 
 .outbox {
   width: 100px;
-  border: 2px solid blue;
-  margin-top: 30px;
-  font-size: 14px;
+  border: 2px solid #42A5F5;
+  margin-top: 20px;
+  font-size: 15px;
   border-radius: 20px;
   width: 100px;
   text-align: center;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding: 5px;
 }
 
 .place_holder {
@@ -471,38 +479,58 @@ option {
 
 .emails-container {
   float: left;
-  border-right: 1px solid black;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%;
+  float: left;
+  border-right: 1px solid #ddd;
   padding-left: 10px;
   height: 100%;
   display: none;
+  overflow: scroll;
 }
-@media screen and (max-width: 480px) {
-  .emails-container {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 65.88078%;
-  }
-  .emails-container:last-child {
-    margin-right: 0;
-  }
+.emails-container:last-child {
+  margin-right: 0;
 }
 
 .email-container {
-  float: right;
-  width: 800px;
-  margin-left: 30px;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%;
   display: none;
+}
+.email-container:last-child {
+  margin-right: 0;
+}
+
+.email-container h1 {
+  border-bottom: 1px solid #ddd;
+  margin: 0px;
 }
 
 .email-container li {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
   display: inline-block;
-  width: 300px;
   margin: 0px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  font-size: 14px;
+}
+.email-container li:last-child {
+  margin-right: 0;
+}
+
+.email-container li:nth-child(2) {
+  color: #ddd;
 }
 
 .email-container ul {
   padding: 0px;
+  margin-top: 0px;
 }
 
 .email-body {
@@ -518,11 +546,59 @@ option {
 }
 
 .email-master {
-  border-top: 1px solid black;
+  border-top: 1px solid #ddd;
+  font-size: 11px;
+  margin-top: 0px;
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+}
+.email-master::after {
+  clear: both;
+  content: "";
+  display: table;
 }
 
-.email-master p {
-  font-size: 20px;
+.wrapper {
+  position: relative;
+}
+
+.email-master img {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 14.70196%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 50%;
+}
+.email-master img:last-child {
+  margin-right: 0;
+}
+
+.email-master-time {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding-right: 5px;
+  font-size: 10px;
+}
+
+.email-master-time p {
+  margin-top: 0px;
+}
+
+.email-master-to {
+  font-weight: bold;
+  padding-top: 5px;
+}
+
+.email-master-send p {
+  margin-top: 0px;
+}
+
+.email-master-subject p {
+  margin-top: 0px;
 }
 
 /*# sourceMappingURL=main.css.map */

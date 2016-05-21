@@ -125,7 +125,7 @@
         <h1>Subject</h1>
           <ul>
             <li><p>Sent To:</p></li>
-            <li><p>Sent At:</p></li>
+            <li><p>Sent At:12/12/2016, 10:29 AM</p></li>
           </ul>
           <p>
           Body: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
@@ -154,9 +154,19 @@
     <script id="view-emails" type="x-tmpl-mustache">
       {{#emails}}
         <div class='email-master' data-id="{{id}}">
-          <h2>{{subject}}</h2>
-          <p>{{to}}</p>
-        </div>
+          <img src= "http://www.gravatar.com/avatar">
+          <div class = "wrapper ">
+            <div class = "email-master-time">
+              <p>12/12/2016, 10:29 AM</p>
+            </div>
+            <div class = "email-master-to"
+              <p>{{to}}</p>
+            </div>
+            <div class = "email-master-subject">
+              <p>{{subject}}</p>
+            </div>
+          </div>
+       </div>
       {{/emails}}
     </script>
 

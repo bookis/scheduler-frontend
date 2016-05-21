@@ -28,7 +28,7 @@ margin:0px;
     padding-left:0px;
   }
   margin:0px;
-  font-size:25px;
+  font-size:15px;
   list-style-type: none;
 }
 
@@ -36,12 +36,18 @@ margin:0px;
   display:inline-block;
   margin-left:20px;
   margin-bottom:10px;
-
+}
+.new-window{
+  font-size:20px;
+}
+.fa.fa-plus{
+  font-size:20px;
 }
 
 a{
   text-decoration:none;
-  color:blue;
+  color:#42A5F5;
+  margin-top:10px;
 }
 
 .email-form{
@@ -179,7 +185,7 @@ a.schedule {
     @include span-columns(4);
     @include shift(8);
   }
-  border:1px solid ;
+  border:1px solid;
   background-color:#ff5817;
   height:80px;
   display:block;
@@ -253,14 +259,13 @@ img{
 
 .outbox{
   width:100px;
-  border:2px solid blue;
-  margin-top:30px;
-  font-size:14px;
+  border:2px solid #42A5F5;
+  margin-top:20px;
+  font-size:15px;
   border-radius:20px;
   width:100px;
   text-align:center;
-  padding-top:5px;
-  padding-bottom:5px;
+  padding:5px;
 }
 
 .place_holder{
@@ -276,32 +281,39 @@ option{
 }
 
 .emails-container{
-  @include media($mobile){
-    @include span-columns(8);
-  }
+  @include span-columns(3);
   float:left;
-  // width:350px;
-  border-right:1px solid black;
+  border-right:1px solid #ddd;
   padding-left:10px;
   height:100%;
   display:none;
+  overflow: scroll;
 }
-
 .email-container{
-  float:right;
-  width:800px;
-  margin-left:30px;
+  @include span-columns(8);
   display:none;
 }
 
-.email-container li{
-  display:inline-block;
-  width:300px;
+.email-container h1{
+  border-bottom:1px solid #ddd;
   margin:0px;
+}
+.email-container li{
+  @include span-columns(6);
+  display:inline-block;
+  margin:0px;
+  margin-bottom:20px;
+  border-bottom:1px solid #ddd;
+  font-size:14px;
+}
+
+.email-container li:nth-child(2){
+  color: #ddd
 }
 
 .email-container ul{
   padding:0px;
+  margin-top:0px;
 }
 
 .email-body{
@@ -310,15 +322,44 @@ option{
 .email-body textarea{
   height:300px;
   width:100%;
-  border: 1px solid #ddd;
+  border:1px solid #ddd;
   font-size:16px;
   border-radius:5px;
 }
 
 .email-master{
-  border-top:1px solid black;
+  border-top: 1px solid #ddd;
+  font-size:11px;
+  margin-top:0px;
+  @include outer-container
+}
+.wrapper{
+  position:relative;
+}
+.email-master img{
+  @include span-columns(2);
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 50%;
 }
 
-.email-master p{
-  font-size:20px;
+.email-master-time{
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding-right:5px;
+  font-size:10px;
+}
+.email-master-time p{
+    margin-top:0px;
+}
+.email-master-to{
+  font-weight:bold;
+  padding-top:5px;
+}
+.email-master-send p{
+  margin-top:0px;
+}
+.email-master-subject p{
+  margin-top:0px;
 }
