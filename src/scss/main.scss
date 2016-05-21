@@ -1,6 +1,8 @@
 @import "../../bower_components/bourbon/app/assets/stylesheets/bourbon.scss";
 @import "../../bower_components/neat/app/assets/stylesheets/neat.scss";
 
+$mobile: new-breakpoint(max-width 480px); $desktop: new-breakpoint(min-width 850px); $tablet: new-breakpoint(max-width 850px);
+
 body, html{
 font-family: $helvetica;
 margin:0px;
@@ -11,16 +13,30 @@ margin:0px;
 }
 
 .nav ul{
+  @include media($mobile){
+    @include span-columns(12);
+    text-align:center;
+    padding-left:0px;
+  }
+  @include media ($desktop){
+    @include span-columns(5);
+    float:right;
+  }
+  @include media ($tablet){
+    @include span-columns(12);
+    text-align:center;
+    padding-left:0px;
+  }
   margin:0px;
   font-size:25px;
-  padding-right:40px;
-  float:right;
   list-style-type: none;
 }
+
 .nav li{
   display:inline-block;
-  margin-right:30px;
+  margin-left:20px;
   margin-bottom:10px;
+
 }
 
 a{
@@ -30,6 +46,10 @@ a{
 
 .email-form{
   display:none;
+}
+
+.angel-logo{
+  width:500px;
 }
 
 .sign-in{
@@ -44,8 +64,9 @@ a{
   width:100%;
   height:40px;
   border-radius:5px;
-  font-size:25px;
+  font-size:16px;
   margin-bottom:5px;
+  padding-left:10px;
 }
 
 form{
@@ -54,12 +75,14 @@ form{
 }
 
 form input{
-  border:3px solid #efefef;
+  border:1px solid #ddd;
+  border-radius:5px;
 }
 
 .schedule-send input{
   width:100%;
   height:80px;
+  font-size:16px;
 }
 
 .styled-select select{
@@ -87,7 +110,7 @@ input{
 }
 
 input:placeholder-shown {
-  font-size:18px;
+  font-size:16px;
   padding-left:10px;
 }
 
@@ -113,6 +136,7 @@ input:placeholder-shown {
 }
 
 #datepicker{
+  font-size:16px;
   font-family:Arial, FontAwesome;
 }
 
@@ -120,17 +144,41 @@ input:placeholder-shown {
  margin-left: 0;
  margin-bottom:30px;
 }
+
 .send-at{
-@include span-columns(4);
+  @include media($mobile){
+    @include span-columns(12);
+  }
+  @include media($desktop){
+    @include span-columns(4);
+  }
 }
 .styled-select{
+  @include media($mobile){
+    @include span-columns(12);
+  }
+  @include media($desktop){
   @include span-columns(4);
+  }
 }
+
 .send-number{
+  @include media ($mobile){
+    @include span-columns(12);
+  }
+  @include media($desktop){
   @include span-columns(4);
+  }
 }
 
 a.schedule {
+  @include media ($mobile){
+    @include span-columns(12);
+  }
+  @include media($desktop){
+    @include span-columns(4);
+    @include shift(8);
+  }
   border:1px solid ;
   background-color:#ff5817;
   height:80px;
@@ -138,19 +186,25 @@ a.schedule {
   border-radius:5px;
   text-align:center;
   color:white;
-  font-size:30px;
+  font-size:2em;
   font-weight:bold;
   vertical-align:middle;
   padding-top:20px;
   margin-top:30px;
   margin-bottom:60px;
-  @include span-columns(4);
-  @include shift(8);
 }
 
 .blue-box{
-  background-color:#0a7bff;
-  height:450px;
+  @include media($mobile){
+    height:700px;
+  }
+  @include media($tablet){
+    height:700px;
+  }
+  @include media($desktop){
+    height:480px;
+  }
+  background-color:#42A5F5;
   margin-top:50px;
   color:white;
   font-weight:bold;
@@ -158,18 +212,43 @@ a.schedule {
   clear: both;
   margin-left:0px;
 }
-.envelope{
-  @include span-columns(6);
-  padding-left:40px;
 
+.envelope{
+  @include media($mobile){
+    @include span-columns(8);
+    @include shift(2);
+  }
+  @include media($desktop){
+    @include span-columns(6);
+    padding-left:40px;
+    padding-bottom:40px;
+  }
+  @include media($tablet){
+    @include span-columns(8);
+    @include shift(2);
+  }
 }
+
 .product-info{
-  @include span-columns(6);
-  padding-right:40px;
+  @include media($mobile){
+    @include span-columns(12);
+    padding-left:20px;
+    padding-right:20px;
+  }
+  @include media($desktop){
+    @include span-columns(6);
+      @include omega();
+      padding-right:40px;
+  }
+  @include media($tablet){
+    @include span-columns(12);
+    padding-left:20px;
+    padding-right:20px;
+  }
 }
 
 img{
-  width:500px;
+  width:100%;
 }
 
 .outbox{
@@ -187,17 +266,21 @@ img{
 .place_holder{
   color: black;
   background-color:white;
-  font-size:18px;
-  border: 3px solid #efefef;
+  font-size:16px;
+  border: 1px solid #ddd;
   width:100%;
+  border-radius:5px;
 }
 option{
     color: #000000;
 }
 
 .emails-container{
+  @include media($mobile){
+    @include span-columns(8);
+  }
   float:left;
-  width:350px;
+  // width:350px;
   border-right:1px solid black;
   padding-left:10px;
   height:100%;
@@ -227,7 +310,9 @@ option{
 .email-body textarea{
   height:300px;
   width:100%;
-  border: 3px solid #efefef;
+  border: 1px solid #ddd;
+  font-size:16px;
+  border-radius:5px;
 }
 
 .email-master{
